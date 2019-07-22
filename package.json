@@ -1,0 +1,22 @@
+{
+  "name": "kdb-v3",
+  "version": "1.0.0",
+  "description": "Governors' Climate and Forests Task Force Knowledge Database Web App",
+  "main": "server/index.js",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "start": "node server/index.js",
+    "start-dev": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonypecchillo/kdb-v3.git"
+  },
+  "author": "Anthony Pecchillo (anthonypecchillo@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonypecchillo/kdb-v3/issues"
+  },
+  "homepage": "https://github.com/anthonypecchillo/kdb-v3#readme"
+}
