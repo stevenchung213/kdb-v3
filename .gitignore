@@ -59,3 +59,17 @@ typings/
 
 # next.js build output
 .next
+
+# DS_Store
+.DS_Store
+
+# React Bundle
+client/dist/bundle.js
+
+# Compiled Image Files
+client/dist/*.jpg
+client/dist/*.png
+client/dist/*.svg
+
+# Global Config File (API Keys, etc.)
+config.js
