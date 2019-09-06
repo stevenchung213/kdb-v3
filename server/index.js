@@ -9,7 +9,7 @@ console.log('PORT IS: ', PORT);
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static(`${__dirname}/../client/dist`));
 
 app.get('/*', (request, response) => {
   response.sendFile(path.resolve(__dirname, '../client/dist/index.html'));
