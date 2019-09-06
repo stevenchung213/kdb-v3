@@ -5,10 +5,8 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Landing from './Landing.jsx';
-
-const App = () => (
-  <Landing />
+const Landing = () => (
+  <div>Landing Page</div>
 );
 
-export default App;
+export default Landing;
