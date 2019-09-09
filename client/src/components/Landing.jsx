@@ -7,6 +7,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Jumbotron from './Jumbotron';
+import Map from './Map';
 
 const LandingGrid = styled.div`
   display: grid;
@@ -17,12 +18,7 @@ const LandingGrid = styled.div`
                        "map map"
                        "sellingpoints sellingpoints"
                        "footer footer"; */
-  height: 1925px;
-`;
-
-const Map = styled.div`
-  /* grid-area: map; */
-  background-color: tomato;
+  height: 2000px;
 `;
 
 const SellingPoints = styled.div`
@@ -38,9 +34,7 @@ const Footer = styled.div`
 const Landing = () => (
   <LandingGrid>
     <Jumbotron />
-    <Map>
-      <h3>Map</h3>
-    </Map>
+    <Map />
     <SellingPoints>
       <h3>Selling Points</h3>
     </SellingPoints>
