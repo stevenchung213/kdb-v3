@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 import Jumbotron from './Jumbotron';
 import Map from './Map';
+import SellingPoints from './SellingPoints';
 
 const LandingGrid = styled.div`
   display: grid;
@@ -19,11 +20,6 @@ const LandingGrid = styled.div`
                        "sellingpoints sellingpoints"
                        "footer footer"; */
   height: 2000px;
-`;
-
-const SellingPoints = styled.div`
-  /* grid-area: sellingpoints; */
-  background-color: lightgreen;
 `;
 
 const Footer = styled.div`
