@@ -22,7 +22,6 @@ const Jumbotron = () => (
 
 const LandingGrid = styled.div`
   display: grid;
-  overflow: auto;
   padding-top: 75px;
   grid-template-rows: 8fr 8fr 4fr 2fr;
   /* grid-template-areas: "navbar navbar"
