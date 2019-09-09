@@ -6,19 +6,7 @@ import React from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
-const JumbotronGrid = styled.div`
-  display: grid;
-  /* grid-area: jumbotron; */
-  grid-template-columns: 1fr 1fr;
-  background-color: skyblue;
-`;
-
-const Jumbotron = () => (
-  <JumbotronGrid>
-    <h3>Jumbotron Left</h3>
-    <h3>Jumbotron Right</h3>
-  </JumbotronGrid>
-);
+import Jumbotron from './Jumbotron';
 
 const LandingGrid = styled.div`
   display: grid;
