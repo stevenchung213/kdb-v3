@@ -26,7 +26,7 @@ const SellingPointsTitle = styled.h1`
 `;
 
 const Square = styled.div`
-  place-self: top;
+  place-self: center;
   border: 2px solid black;
   height: 239px;
   width: 239px;

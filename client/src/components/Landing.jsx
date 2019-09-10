@@ -14,13 +14,13 @@ import SellingPoints from './SellingPoints';
 const LandingGrid = styled.div`
   display: grid;
   padding-top: 75px;
-  grid-template-rows: 8fr 8fr 4fr 4fr;
+  grid-template-rows: 8fr 8fr 5fr 4fr;
   /* grid-template-areas: "navbar navbar"
                        "jumbotron jumbotron"
                        "map map"
                        "sellingpoints sellingpoints"
                        "footer footer"; */
-  height: 2175px;
+  height: 2265px;
 `;
 
 const Landing = () => (
