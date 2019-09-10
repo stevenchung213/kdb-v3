@@ -5,18 +5,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import JumbotronBackgroundImage from '../../dist/assets/images/Mau-Forest-Kenya-copy.png';
+
 const JumbotronGrid = styled.div`
   display: grid;
   /* grid-area: jumbotron; */
   grid-template-columns: 1fr 1fr;
-  background-color: skyblue;
+  background-image: url(${JumbotronBackgroundImage});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 700.8px;
+  background-position: top left;
+  background-size: cover;
 `;
 
 const JumbotronMiniGrid = styled.div`
   display: grid;
   grid-template-columns: 11fr 9fr;
   grid-template-rows: 1fr 2fr 3fr 1fr;
-  background-color: rgba(255, 255, 255, 0.20);
+  background-color: rgba(255, 255, 255, 0.75);
   align-items: center;
   padding: 10% 0;
 `;
