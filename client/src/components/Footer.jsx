@@ -74,7 +74,7 @@ const Icon = styled.i`
 const SocialIcon = styled.i`
   /* grid-area: logo; */
   place-self: start;
-  transition: color 0.6s ease 0.05s;
+  transition: color 0.6s ease 0s;
   &:hover {
     /* color: #c2e645; */
     /* color: #bfe639; */
