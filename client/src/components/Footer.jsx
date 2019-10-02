@@ -14,7 +14,8 @@ const FooterGrid = styled.div`
   display: grid;
   /* grid-area: footer; */
   grid-template-columns: 1fr 1fr;
-  background-color: grey;
+  background-color: #3E522D;
+  color: white;
 `;
 
 const FooterMiniGrid = styled.div`
@@ -37,19 +38,25 @@ const FooterTitle = styled.h3`
   margin: 0 15px;
 `;
 
-const FooterNavList = styled.ul`
-  /* line-spacing: 10px; */
-  list-style: none;
-  /* margin: 0;
-  padding: 0; */
-`;
-
 const FooterNavListGrid = styled.div`
   display: grid;
-  grid-template-columns: 30px 4fr;
+  /* grid-template-columns: 30px 4fr; */
   grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 15px;
   margin: 15px;
+`;
+
+const FooterNavListItemGrid = styled.div`
+  display: grid;
+  grid-template-columns: 30px auto 4fr;
+  transition: color 0.4s ease 0.05s;
+  &:hover {
+    color: #582399;
+    /* color: #b0cf44; */
+    /* color: #c2e645; */
+    /* color: #bfe639; */
+    /* color: #b5db37; */
+  }
 `;
 
 const FooterSocialGrid = styled.div`
@@ -67,6 +74,12 @@ const Icon = styled.i`
 const SocialIcon = styled.i`
   /* grid-area: logo; */
   place-self: start;
+  transition: color 0.6s ease 0.05s;
+  &:hover {
+    /* color: #c2e645; */
+    /* color: #bfe639; */
+    color: #b5db37;
+  }
 `;
 
 const FooterCopyrightText = styled.div`
@@ -77,7 +90,7 @@ const Logo = styled.div`
   /* grid-area: logo; */
   place-self: top;
   background: ${({ logo }) => `no-repeat center/100% url(${logo}`});
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 130px;
   height: 130px;
 `;
@@ -91,14 +104,22 @@ const Footer = () => (
     <FooterMiniGrid>
       <FooterTitle>More:</FooterTitle>
       <FooterNavListGrid>
-        <Icon className="fas fa-info" />
-        <span className="menu-text"> About</span>
-        <Icon className="far fa-file-pdf" />
-        <span className="menu-text"> Sources</span>
-        <Icon className="far fa-address-book" />
-        <span className="menu-text"> Contacts</span>
-        <Icon className="fas fa-home" />
-        <span className="menu-text"> Back to Main Site</span>
+        <FooterNavListItemGrid>
+          <Icon className="fas fa-info" />
+          <span className="menu-text"> About</span>
+        </FooterNavListItemGrid>
+        <FooterNavListItemGrid>
+          <Icon className="far fa-file-pdf" />
+          <span className="menu-text"> Sources</span>
+        </FooterNavListItemGrid>
+        <FooterNavListItemGrid>
+          <Icon className="far fa-address-book" />
+          <span className="menu-text"> Contacts</span>
+        </FooterNavListItemGrid>
+        <FooterNavListItemGrid>
+          <Icon className="fas fa-home" />
+          <span className="menu-text"> Back to Main Site</span>
+        </FooterNavListItemGrid>
       </FooterNavListGrid>
       <div>
         <FooterSocialGrid>
