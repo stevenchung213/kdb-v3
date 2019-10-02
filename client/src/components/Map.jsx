@@ -27,6 +27,7 @@ const MapButton = styled.div`
   justify-content: center;
   transition: border 0.6s ease 0s, background-color 0.6s ease 0s, color 0.6s ease 0s;
   width: 25%;
+  min-width: 260px;
   &:hover {
     /* border: solid #3E522D 2px;
     background-color: #3E522D; */
@@ -45,6 +46,7 @@ const MapButtonText = styled.span`
   /* font-family: Arial, Helvetica, sans-serif; */
   font-size: 18px;
   font-weight: 700;
+  padding: 0 25px;
 `;
 
 // const JumbotronButtonText = styled.span`
@@ -61,7 +63,7 @@ const MapButtonText = styled.span`
 
 const Map = () => (
   <MapGrid>
-    <WorldMap />
+    <div />
     <MapButton>
       <MapButtonText>Navigate Full Database</MapButtonText>
     </MapButton>
