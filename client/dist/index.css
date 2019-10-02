@@ -2,8 +2,61 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('./assets/fonts/AvenirNext/AvenirNext-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('./assets/fonts/AvenirNext/AvenirNext-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('./assets/fonts/AvenirNext/AvenirNext-DemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('./assets/fonts/AvenirNext/AvenirNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('./assets/fonts/AvenirNext/AvenirNext-Heavy.woff2') format('woff2');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/OpenSans/OpenSans-ExtraBold.woff2') format('woff2');
+  font-weight: 900;
+}
+
 html, body, #root {
   height: 2265px;
   margin: 0;
   overscroll-behavior: none;
+  font-family: 'Avenir Next';
 }
