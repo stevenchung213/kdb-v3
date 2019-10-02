@@ -5,11 +5,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GCFTFLogo from '../../dist/assets/images/logo.png';
+import GCFTFLogo from '../../dist/assets/logos/GCFTF.png';
 
 const NavBarGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 4.5fr 1.5fr 1fr 1fr 3fr;
+  grid-template-columns: 1fr minmax(250px, 4.5fr) minmax(143px, 1.5fr) 1fr 1fr minmax(350px, 3fr);
+  grid-gap: 10px;
   align-items: center;
   background-color: white;
   height: 75px;
@@ -25,30 +26,45 @@ const Logo = styled.div`
   background: no-repeat center/100% url(${GCFTFLogo});
   width: 75px;
   height: 75px;
+  margin-left: 10px;
 `;
 
 const NavTitle = styled.div`
   /* color: #3E522D; */
+  /* color: #692bb5 */
   height: 100%
   font-size: 20px;
   font-weight: 700;
   line-height: 75px;
   text-align: left;
   width: 100%;
+  transition: color 0.4s ease 0.05s;
+  &:hover {
+    color: #582399;
 `;
 
 const NavLink = styled.div`
   /* color: #3E522D; */
+  font-weight: 600;
   height: 100%
   width: 100%;
   text-align: center;
   line-height: 75px;
+  transition: color 0.4s ease 0.05s;
+  &:hover {
+    color: #582399;
+    /* color: #b0cf44; */
+    /* color: #c2e645; */
+    /* color: #bfe639; */
+    /* color: #b5db37; */
+  }
 `;
 
 const SearchBar = styled.div`
   height: 50%;
   place-self: center;
   width: 90%;
+  /* border: 1px dashed red; */
   /* position: relative; */
 `;
 
