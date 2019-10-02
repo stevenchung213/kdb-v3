@@ -5,11 +5,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import CIFORLogo from '../../dist/assets/logos/CIFOR.png';
+import EIILogo from '../../dist/assets/logos/EII.png';
+import GFWLogo from '../../dist/assets/logos/GFW.png';
+import TCGLogo from '../../dist/assets/logos/TCG.png';
+
 const FooterGrid = styled.div`
   display: grid;
   /* grid-area: footer; */
   grid-template-columns: 1fr 1fr;
-  background-color: royalblue;
+  background-color: grey;
 `;
 
 const FooterMiniGrid = styled.div`
@@ -20,65 +25,107 @@ const FooterMiniGrid = styled.div`
 
 const AcknowledgementsGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   /* grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); */
   /* align-items: center; */
   justify-items: center;
-  grid-gap: 30px;
+  grid-gap: 15px;
+  margin: 0 15px;
 `;
 
-const Square = styled.div`
+const FooterTitle = styled.h3`
+  margin: 0 15px;
+`;
+
+const FooterNavList = styled.ul`
+  /* line-spacing: 10px; */
+  list-style: none;
+  /* margin: 0;
+  padding: 0; */
+`;
+
+const FooterNavListGrid = styled.div`
+  display: grid;
+  grid-template-columns: 30px 4fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 15px;
+  margin: 15px;
+`;
+
+const FooterSocialGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, auto) 50%;
+  grid-gap: 15px;
+  margin: 0 15px 15px 15px;
+`;
+
+const Icon = styled.i`
+  /* grid-area: logo; */
+  place-self: center;
+`;
+
+const SocialIcon = styled.i`
+  /* grid-area: logo; */
+  place-self: start;
+`;
+
+const FooterCopyrightText = styled.div`
+  margin: 0 15px;
+`;
+
+const Logo = styled.div`
+  /* grid-area: logo; */
   place-self: top;
+  background: ${({ logo }) => `no-repeat center/100% url(${logo}`});
   border: 2px solid black;
-  height: 130px;
   width: 130px;
+  height: 130px;
+`;
+
+const AcknowledgementsNote = styled.h5`
+  margin: 0 15px;
 `;
 
 const Footer = () => (
   <FooterGrid>
     <FooterMiniGrid>
-      <h3>More:</h3>
-      <ul>
-        <li>
-          <i className="fas fa-info" />
-          <span className="menu-text"> About</span>
-        </li>
-        <li>
-          <i className="far fa-file-pdf" />
-          <span className="menu-text"> Sources</span>
-        </li>
-        <li>
-          <i className="far fa-address-book" />
-          <span className="menu-text"> Contacts</span>
-        </li>
-        <li>
-          <i className="fas fa-home" />
-          <span className="menu-text"> Back to Main Site</span>
-        </li>
-      </ul>
+      <FooterTitle>More:</FooterTitle>
+      <FooterNavListGrid>
+        <Icon className="fas fa-info" />
+        <span className="menu-text"> About</span>
+        <Icon className="far fa-file-pdf" />
+        <span className="menu-text"> Sources</span>
+        <Icon className="far fa-address-book" />
+        <span className="menu-text"> Contacts</span>
+        <Icon className="fas fa-home" />
+        <span className="menu-text"> Back to Main Site</span>
+      </FooterNavListGrid>
       <div>
-        <div>
-          <i className="fab fa-facebook-f fa-3x" />
-          <i className="fab fa-twitter fa-3x" />
-          <i className="fab fa-instagram fa-3x" />
-          <i className="fab fa-youtube fa-3x" />
-        </div>
-        <div>©Governors' Climate and Forest Task Force, 2019</div>
+        <FooterSocialGrid>
+          <SocialIcon className="fab fa-facebook-f fa-3x" />
+          <SocialIcon className="fab fa-twitter fa-3x" />
+          <SocialIcon className="fab fa-instagram fa-3x" />
+          <SocialIcon className="fab fa-youtube fa-3x" />
+        </FooterSocialGrid>
+        <FooterCopyrightText>
+          ©Governors' Climate and Forest Task Force, 2019
+        </FooterCopyrightText>
       </div>
     </FooterMiniGrid>
     <FooterMiniGrid>
-      <h3>Acknowledgements:</h3>
+      <FooterTitle>Acknowledgements:</FooterTitle>
       <AcknowledgementsGrid>
-        <Square />
-        <Square />
-        <Square />
+        <Logo logo={GFWLogo} />
+        <Logo logo={CIFORLogo} />
+        <Logo logo={EIILogo} />
+        <Logo logo={TCGLogo} />
       </AcknowledgementsGrid>
-      <h5>
+      <AcknowledgementsNote>
         A special thanks to our collaborators, who share an equal passion and
         self-assigned responsibility to battle the root causes and effects of
         climate change and deforestation. Your efforts and contributions to our
         collective cause is recognized, and appreciated.
-      </h5>
+      </AcknowledgementsNote>
     </FooterMiniGrid>
   </FooterGrid>
 );
