@@ -10,6 +10,13 @@ import EIILogo from '../../dist/assets/logos/EII.png';
 import GFWLogo from '../../dist/assets/logos/GFW.png';
 import TCGLogo from '../../dist/assets/logos/TCG.png';
 
+const GCFTF_URL = 'https://www.gcftf.org';
+const GCFTF_KDB_URL = 'https://www.gcftaskforce-database.org';
+const GFW_URL = 'https://www.globalforestwatch.org';
+const CIFOR_URL = 'https://www.cifor.org';
+const EII_URL = 'https://www.earthinnovation.org';
+const TCG_URL = 'https://www.theclimategroup.org';
+
 const FooterGrid = styled.div`
   display: grid;
   /* grid-area: footer; */
@@ -136,10 +143,18 @@ const Footer = () => (
     <FooterMiniGrid>
       <FooterTitle>Acknowledgements:</FooterTitle>
       <AcknowledgementsGrid>
-        <Logo logo={GFWLogo} />
-        <Logo logo={CIFORLogo} />
-        <Logo logo={EIILogo} />
-        <Logo logo={TCGLogo} />
+        <a href={GFW_URL}>
+          <Logo logo={GFWLogo} />
+        </a>
+        <a href={CIFOR_URL}>
+          <Logo logo={CIFORLogo} />
+        </a>
+        <a href={EII_URL}>
+          <Logo logo={EIILogo} />
+        </a>
+        <a href={TCG_URL}>
+          <Logo logo={TCGLogo} />
+        </a>
       </AcknowledgementsGrid>
       <AcknowledgementsNote>
         A special thanks to our collaborators, who share an equal passion and
