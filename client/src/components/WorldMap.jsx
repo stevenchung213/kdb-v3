@@ -13,7 +13,8 @@ import Brazil from 'fusionmaps/maps/fusioncharts.brazil';
 import Mexico from 'fusionmaps/maps/fusioncharts.mexico';
 import Colombia from 'fusionmaps/maps/fusioncharts.colombia';
 import Ecuador from 'fusionmaps/maps/fusioncharts.ecuador';
-import Spain from 'fusionmaps/maps/fusioncharts.spain';
+import Peru from 'fusionmaps/maps/fusioncharts.peru';
+// import Spain from 'fusionmaps/maps/fusioncharts.spain';
 import Nigeria from 'fusionmaps/maps/fusioncharts.nigeria';
 import Indonesia from 'fusionmaps/maps/fusioncharts.indonesia';
 import CoteDivoire from 'fusionmaps/maps/fusioncharts.cotedivoire';
@@ -29,6 +30,12 @@ import Matogrosso from 'fusionmaps/maps/fusioncharts.matogrosso';
 import Para from 'fusionmaps/maps/fusioncharts.para';
 import Rondonia from 'fusionmaps/maps/fusioncharts.rondonia';
 import Roraima from 'fusionmaps/maps/fusioncharts.roraima';
+// Tocantins Here!
+import SpecialRegionofAceh from 'fusionmaps/maps/fusioncharts.specialregionofaceh';
+import CentralKalimantan from 'fusionmaps/maps/fusioncharts.centralkalimantan';
+import EastKalimantan from 'fusionmaps/maps/fusioncharts.eastkalimantan';
+import NorthKalimantan from 'fusionmaps/maps/fusioncharts.northkalimantan';
+// import WestKalimantan from 'fusionmaps/maps/fusioncharts.westkalimantan';
 import ReactFC from 'react-fusioncharts';
 
 FusionCharts.options.creditLabel = false;
@@ -45,12 +52,18 @@ ReactFC.fcRoot(
   Roraima,
   Texas,
   California,
+  SpecialRegionofAceh,
+  CentralKalimantan,
+  EastKalimantan,
+  NorthKalimantan,
+  // WestKalimantan,
   USA,
   Brazil,
   Mexico,
   Colombia,
   Ecuador,
-  Spain,
+  Peru,
+  // Spain,
   Nigeria,
   Indonesia,
   CoteDivoire,
@@ -60,22 +73,22 @@ ReactFC.fcRoot(
 
 const dataSource = {
   chart: {
-    caption: 'GCF Countries',
+    caption: 'GCF National Influence',
     subcaption: 'By Number of GCF States/Provinces',
     numbersuffix: '',
     // includevalueinlabels: '1',
     // labelsepchar: ': ',
-    showentitytooltip: '0',
-    showentityhovereffect: '0',
+    showentitytooltip: '1',
+    showentityhovereffect: '1',
     entityToolText:
       "<div style='font-size:14px; text-align:center; padding: 2px 4px 2px 4px; color:black;'>$lName</div><div style='font-size:12px; color:black;'>GCF States & Provinces: <b>$value</b></div>",
     entityFillHoverColor: '#FFF9C4',
     theme: 'fusion',
     nullentitycolor: '#C3D2DA',
-    entityfillhovercolor: '#FFF9C4',
+    // entityfillhovercolor: '#FFF9C4',
     showLegend: false,
-    chartLeftMargin: -400,
-    chartRightMargin: -400,
+    chartLeftMargin: 150,
+    // chartRightMargin: 100,
   },
   colorrange: {
     minvalue: '0',
@@ -122,7 +135,7 @@ const dataSource = {
     },
     {
       internalId: '50',
-      newId: 'Ivory Coast',
+      newId: 'CoteDivoire',
     },
     {
       internalId: '73',
@@ -132,10 +145,10 @@ const dataSource = {
       internalId: '105',
       newId: 'Indonesia',
     },
-    {
-      internalId: '166',
-      newId: 'Spain',
-    },
+    // {
+    //   internalId: '166',
+    //   newId: 'Spain',
+    // },
   ],
   data: [
     {
@@ -169,7 +182,7 @@ const dataSource = {
       link: 'newchart-json-peru',
     },
     {
-      id: 'Ivory Coast',
+      id: 'CoteDivoire',
       value: '2',
       link: 'newchart-json-cotedivoire',
     },
@@ -183,11 +196,6 @@ const dataSource = {
       value: '7',
       link: 'newchart-json-indonesia',
     },
-    {
-      id: 'Spain',
-      value: '1',
-      link: 'newchart-json-spain',
-    },
   ],
 
   linkeddata: [
@@ -198,27 +206,27 @@ const dataSource = {
           caption: 'Annual Sales by State',
           subcaption: 'Last year',
           entityFillHoverColor: '#cccccc',
-          numberScaleValue: '1,1000,1000',
-          numberScaleUnit: 'K,M,B',
-          numberPrefix: '$',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
           showLabels: '1',
           theme: 'fusion',
         },
         colorrange: {
           minvalue: '0',
-          startlabel: 'Low',
-          endlabel: 'High',
-          code: '#e44a00',
+          code: '#8AB458',
           gradient: '1',
           color: [
             {
-              maxvalue: '56580',
-              displayvalue: 'Average',
-              code: '#f8bd19',
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
             },
             {
-              maxvalue: '100000',
-              code: '#6baa01',
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
             },
           ],
         },
@@ -226,12 +234,12 @@ const dataSource = {
         data: [
           {
             id: 'tx',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-texas',
           },
           {
             id: 'ca',
-            value: '55425',
+            value: '5',
             link: 'newchart-json-california',
           },
         ],
@@ -262,27 +270,27 @@ const dataSource = {
           caption: 'Brazil Caption',
           subcaption: 'Last year',
           entityFillHoverColor: '#cccccc',
-          numberScaleValue: '1,1000,1000',
-          numberScaleUnit: 'K,M,B',
-          numberPrefix: '$',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
           showLabels: '1',
           theme: 'fusion',
         },
         colorrange: {
           minvalue: '0',
-          startlabel: 'Low',
-          endlabel: 'High',
-          code: '#e44a00',
+          code: '#8AB458',
           gradient: '1',
           color: [
             {
-              maxvalue: '56580',
-              displayvalue: 'Average',
-              code: '#f8bd19',
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
             },
             {
-              maxvalue: '100000',
-              code: '#6baa01',
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
             },
           ],
         },
@@ -290,42 +298,42 @@ const dataSource = {
         data: [
           {
             id: '001',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-acre',
           },
           {
             id: '003',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-amapa',
           },
           {
             id: '004',
-            value: '55425',
+            value: '5',
             link: 'newchart-json-amazonas',
           },
           {
             id: '010',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-maranhao',
           },
           {
             id: '011',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-matogrosso',
           },
           {
             id: '014',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-para',
           },
           {
             id: '022',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-rondonia',
           },
           {
             id: '023',
-            value: '75425',
+            value: '5',
             link: 'newchart-json-roraima',
           },
         ],
@@ -394,7 +402,460 @@ const dataSource = {
               },
             },
           },
+          // TODO: Tocantins here!
         ],
+      },
+    },
+    {
+      id: 'indonesia',
+      linkedchart: {
+        chart: {
+          caption: 'Indnesia Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: '01',
+            value: '5',
+            link: 'newchart-json-specialregionofaceh',
+          },
+          {
+            id: '13',
+            value: '5',
+            link: 'newchart-json-centralkalimantan',
+          },
+          {
+            id: '14',
+            value: '5',
+            link: 'newchart-json-eastkalimantan',
+          },
+          {
+            id: '42',
+            value: '5',
+            link: 'newchart-json-northkalimantan',
+          },
+          {
+            id: '11',
+            value: '5',
+            // link: 'newchart-json-westkalimantan',
+          },
+          {
+            id: '36',
+            value: '5',
+            // link: 'newchart-json-specialregionofpapua',
+          },
+          {
+            id: '39',
+            value: '5',
+            // link: 'newchart-json-specialregionofwestpapua',
+          },
+        ],
+        linkeddata: [
+          {
+            id: 'specialregionofaceh',
+            linkedchart: {
+              chart: {
+                theme: 'fusion',
+              },
+            },
+          },
+          {
+            id: 'centralkalimantan',
+            linkedchart: {
+              chart: {
+                theme: 'fusion',
+              },
+            },
+          },
+          {
+            id: 'eastkalimantan',
+            linkedchart: {
+              chart: {
+                theme: 'fusion',
+              },
+            },
+          },
+          {
+            id: 'northkalimantan',
+            linkedchart: {
+              chart: {
+                theme: 'fusion',
+              },
+            },
+          },
+          // {
+          //   id: 'westkalimantan',
+          //   linkedchart: {
+          //     chart: {
+          //       theme: 'fusion',
+          //     },
+          //   },
+          // },
+          // {
+          //   id: 'specialregionofpapua',
+          //   linkedchart: {
+          //     chart: {
+          //       theme: 'fusion',
+          //     },
+          //   },
+          // },
+          // {
+          //   id: 'specialregionofwestpapua',
+          //   linkedchart: {
+          //     chart: {
+          //       theme: 'fusion',
+          //     },
+          //   },
+          // },
+        ],
+      },
+    },
+    {
+      id: 'mexico',
+      linkedchart: {
+        chart: {
+          caption: 'Mexico Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: '004',
+            value: '5',
+            // link: 'newchart-json-campeche',
+          },
+          {
+            id: '005',
+            value: '5',
+            // link: 'newchart-json-chiapas',
+          },
+          {
+            id: '013',
+            value: '5',
+            // link: 'newchart-json-jalisco',
+          },
+          {
+            id: '019',
+            value: '5',
+            // link: 'newchart-json-oaxaca',
+          },
+          {
+            id: '022',
+            value: '5',
+            // link: 'newchart-json-quintanaroo',
+          },
+          {
+            id: '026',
+            value: '5',
+            // link: 'newchart-json-tobasco',
+          },
+          {
+            id: '030',
+            value: '5',
+            // link: 'newchart-json-yucatan',
+          },
+        ],
+        // linkeddata: [
+        // ],
+      },
+    },
+    {
+      id: 'peru',
+      linkedchart: {
+        chart: {
+          caption: 'Peru Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: '01',
+            value: '5',
+            // link: 'newchart-json-amazonas',
+          },
+          {
+            id: '10',
+            value: '5',
+            // link: 'newchart-json-huanuco',
+          },
+          {
+            id: '016',
+            value: '5',
+            // link: 'newchart-json-loreto',
+          },
+          {
+            id: '17',
+            value: '5',
+            // link: 'newchart-json-madrededios',
+          },
+          {
+            id: '20',
+            value: '5',
+            // link: 'newchart-json-Piura',
+          },
+          {
+            id: '22',
+            value: '5',
+            // link: 'newchart-json-sanmartin',
+          },
+          {
+            id: '25',
+            value: '5',
+            // link: 'newchart-json-ucayali',
+          },
+        ],
+        // linkeddata: [
+        // ],
+      },
+    },
+    {
+      id: 'colombia',
+      linkedchart: {
+        chart: {
+          caption: 'Colombia Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: '08',
+            value: '5',
+            // link: 'newchart-json-caqueta',
+          },
+        ],
+        // linkeddata: [
+        // ],
+      },
+    },
+    {
+      id: 'ecuador',
+      linkedchart: {
+        chart: {
+          caption: 'Ecuador Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: '18',
+            value: '5',
+            // link: 'newchart-json-pastaza',
+          },
+        ],
+        // linkeddata: [
+        // ],
+      },
+    },
+    {
+      id: 'cotedivoire',
+      linkedchart: {
+        chart: {
+          caption: 'Ivory Coast Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: 'CI.LC',
+            value: '5',
+            // link: 'newchart-json-belier',
+          },
+          {
+            id: 'CI.MV',
+            value: '5',
+            // link: 'newchart-json-cavally',
+          },
+        ],
+        // linkeddata: [
+        // ],
+      },
+    },
+    {
+      id: 'nigeria',
+      linkedchart: {
+        chart: {
+          caption: 'Nigeria Caption',
+          subcaption: 'Last year',
+          entityFillHoverColor: '#cccccc',
+          // numberScaleValue: '1,1000,1000',
+          // numberScaleUnit: 'K,M,B',
+          numberSuffix: ' km²',
+          showLabels: '1',
+          theme: 'fusion',
+        },
+        colorrange: {
+          minvalue: '0',
+          code: '#8AB458',
+          gradient: '1',
+          color: [
+            {
+              minvalue: '1',
+              maxvalue: '5',
+              color: '#8AB458',
+            },
+            {
+              minvalue: '6',
+              maxvalue: '9',
+              color: '#426539',
+              // color: '#3E522D'
+            },
+          ],
+        },
+
+        data: [
+          {
+            id: 'NG.CR',
+            value: '5',
+            // link: 'newchart-json-crossriver',
+          },
+        ],
+        // linkeddata: [
+        // ],
       },
     },
   ],
