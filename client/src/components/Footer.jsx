@@ -136,12 +136,12 @@ const Footer = () => (
           <SocialIcon className="fab fa-youtube fa-3x" />
         </FooterSocialGrid>
         <FooterCopyrightText>
-          ©Governors' Climate and Forest Task Force, 2019
+          ©Governors' Climate and Forests Task Force, 2019
         </FooterCopyrightText>
       </div>
     </FooterMiniGrid>
     <FooterMiniGrid>
-      <FooterTitle>Acknowledgements:</FooterTitle>
+      <FooterTitle>With Support From:</FooterTitle>
       <AcknowledgementsGrid>
         <a href={GFW_URL}>
           <Logo logo={GFWLogo} />
@@ -156,12 +156,7 @@ const Footer = () => (
           <Logo logo={TCGLogo} />
         </a>
       </AcknowledgementsGrid>
-      <AcknowledgementsNote>
-        A special thanks to our collaborators, who share an equal passion and
-        self-assigned responsibility to battle the root causes and effects of
-        climate change and deforestation. Your efforts and contributions to our
-        collective cause is recognized, and appreciated.
-      </AcknowledgementsNote>
+      <div />
     </FooterMiniGrid>
   </FooterGrid>
 );
