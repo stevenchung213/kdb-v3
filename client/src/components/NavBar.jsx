@@ -95,22 +95,26 @@ const SearchBarButton = styled.button`
   font-size: 14px;
 `;
 
-const NavBar = () => (
-  <NavBarGrid>
-    <Logo />
-    <NavTitle>
-      Knowledge Database
-    </NavTitle>
-    <NavLink>Navigate Database</NavLink>
-    <NavLink>About</NavLink>
-    <NavLink>Contact</NavLink>
-    <SearchBar>
-      <SearchBarInput placeholder="Search" type="text" />
-      <SearchBarButton>
-        <i className="fa fa-search" />
-      </SearchBarButton>
-    </SearchBar>
-  </NavBarGrid>
-);
+const NavBar = ({ content }) => {
+  const { NAVIGATE_DATABASE, ABOUT, CONTACT, SEARCH_PLACEHOLDER } = content;
+
+  return (
+    <NavBarGrid>
+      <Logo />
+      <NavTitle>
+        Knowledge Database
+      </NavTitle>
+      <NavLink>{NAVIGATE_DATABASE}</NavLink>
+      <NavLink>{ABOUT}</NavLink>
+      <NavLink>{CONTACT}</NavLink>
+      <SearchBar>
+        <SearchBarInput placeholder={SEARCH_PLACEHOLDER} type="text" />
+        <SearchBarButton>
+          <i className="fa fa-search" />
+        </SearchBarButton>
+      </SearchBar>
+    </NavBarGrid>
+  );
+};
 
 export default NavBar;

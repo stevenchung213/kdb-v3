@@ -41,6 +41,7 @@ const JumbotronBrandText = styled.div`
   align-self: center;
   width: 100%;
   /* border: 1px dashed red; */
+  /* color: #582399; */
 `;
 
 const JumbotronTitle = styled.div`
@@ -57,6 +58,9 @@ const JumbotronTitle = styled.div`
   font-size: 75px;
   text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
   /* border: 1px dashed red; */
+  transition: color 0.4s ease 0.05s;
+  &:hover {
+    color: #582399;
 `;
 
 const JumbotronDescription = styled.div`
@@ -119,41 +123,41 @@ const JumbotronButtonText = styled.span`
   } */
 `;
 
-const Jumbotron = () => (
-  <JumbotronGrid>
-    <div />
-    <JumbotronMiniGrid>
-      <JumbotronBrandText>
-        GOVERNORS' CLIMATE &
-        <br />
-        FOREST (GCF) TASK FORCE
-      </JumbotronBrandText>
+const Jumbotron = ({ content }) => {
+  const { DESCRIPTION, NAVIGATE_DB, GLOBAL_SUMMARY } = content;
+  return (
+    <JumbotronGrid>
       <div />
-      <JumbotronTitle>
-        Knowledge
-        <br />
-        Database
-      </JumbotronTitle>
-      <div />
-      <JumbotronDescription>
-        An open platform integrating comprehensive information from GCF Task
-        Force member states and provinces reporting current status and trends
-        regarding land use, deforestation, frameworks, policies, and
-        partnerships.
-      </JumbotronDescription>
-      <div />
-      <JumbotronButtonGrid>
+      <JumbotronMiniGrid>
+        <JumbotronBrandText>
+          GOVERNORS' CLIMATE &
+          <br />
+          FOREST (GCF) TASK FORCE
+        </JumbotronBrandText>
         <div />
-        <JumbotronButton>
-          <JumbotronButtonText>Navigate DB</JumbotronButtonText>
-        </JumbotronButton>
+        <JumbotronTitle>
+          Knowledge
+          <br />
+          Database
+        </JumbotronTitle>
         <div />
-        <JumbotronButton>
-          <JumbotronButtonText>Global Summary</JumbotronButtonText>
-        </JumbotronButton>
-      </JumbotronButtonGrid>
-    </JumbotronMiniGrid>
-  </JumbotronGrid>
-);
+        <JumbotronDescription>
+          {DESCRIPTION}
+        </JumbotronDescription>
+        <div />
+        <JumbotronButtonGrid>
+          <div />
+          <JumbotronButton>
+            <JumbotronButtonText>{NAVIGATE_DB}</JumbotronButtonText>
+          </JumbotronButton>
+          <div />
+          <JumbotronButton>
+            <JumbotronButtonText>{GLOBAL_SUMMARY}</JumbotronButtonText>
+          </JumbotronButton>
+        </JumbotronButtonGrid>
+      </JumbotronMiniGrid>
+    </JumbotronGrid>
+  );
+}
 
 export default Jumbotron;

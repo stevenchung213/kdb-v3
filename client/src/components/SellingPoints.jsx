@@ -32,15 +32,19 @@ const Square = styled.div`
   width: 239px;
 `;
 
-const SellingPoints = () => (
-  <SellingPointsGrid>
-    <SellingPointsTitle>Selling Points</SellingPointsTitle>
-    <SellingPointsMiniGrid>
-      <Square />
-      <Square />
-      <Square />
-    </SellingPointsMiniGrid>
-  </SellingPointsGrid>
-);
+const SellingPoints = ({ content }) => {
+  const { TITLE, TEXT_ONE, TEXT_TWO, TEXT_THREE } = content;
+
+  return (
+    <SellingPointsGrid>
+      <SellingPointsTitle>{TITLE}</SellingPointsTitle>
+      <SellingPointsMiniGrid>
+        <Square />
+        <Square />
+        <Square />
+      </SellingPointsMiniGrid>
+    </SellingPointsGrid>
+  );
+};
 
 export default SellingPoints;

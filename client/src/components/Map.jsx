@@ -11,6 +11,7 @@ const MapGrid = styled.div`
   display: grid;
   /* grid-area: map; */
   grid-template-rows: 17fr 3fr;
+  /* grid-template-columns: auto; */
   align-items: center;
   justify-items: center;
   background-color: white;
@@ -49,25 +50,24 @@ const MapButtonText = styled.span`
   padding: 0 25px;
 `;
 
-// const JumbotronButtonText = styled.span`
-// /* transition: color 0.4s ease 0s; */
-// /* color: black; */
-// /* font-family: Arial, Helvetica, sans-serif; */
-// font-size: 18px;
-// font-weight: 700;
-// /* transition: color 0.4s ease 0s;
-// &:hover {
-//   color: #582399;
-// } */
-// `;
+const MapContainer = styled.div`
+  height: 600px;
+  width: 100%;
+`;
 
-const Map = () => (
-  <MapGrid>
-    <div />
-    <MapButton>
-      <MapButtonText>Navigate Full Database</MapButtonText>
-    </MapButton>
-  </MapGrid>
-);
+const Map = ({ content }) => {
+  const { TITLE, SUB_TITLE, NAVIGATE_FULL_DATABASE } = content;
+
+  return (
+    <MapGrid>
+      <MapContainer>
+        <WorldMap />
+      </MapContainer>
+      <MapButton>
+        <MapButtonText>{NAVIGATE_FULL_DATABASE}</MapButtonText>
+      </MapButton>
+    </MapGrid>
+  );
+}
 
 export default Map;

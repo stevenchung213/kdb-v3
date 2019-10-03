@@ -102,63 +102,74 @@ const Logo = styled.div`
   height: 130px;
 `;
 
-const AcknowledgementsNote = styled.h5`
-  margin: 0 15px;
-`;
+// const AcknowledgementsNote = styled.h5`
+//   margin: 0 15px;
+// `;
 
-const Footer = () => (
-  <FooterGrid>
-    <FooterMiniGrid>
-      <FooterTitle>More:</FooterTitle>
-      <FooterNavListGrid>
-        <FooterNavListItemGrid>
-          <Icon className="fas fa-info" />
-          <span className="menu-text"> About</span>
-        </FooterNavListItemGrid>
-        <FooterNavListItemGrid>
-          <Icon className="far fa-file-pdf" />
-          <span className="menu-text"> Sources</span>
-        </FooterNavListItemGrid>
-        <FooterNavListItemGrid>
-          <Icon className="far fa-address-book" />
-          <span className="menu-text"> Contacts</span>
-        </FooterNavListItemGrid>
-        <FooterNavListItemGrid>
-          <Icon className="fas fa-home" />
-          <span className="menu-text"> Back to Main Site</span>
-        </FooterNavListItemGrid>
-      </FooterNavListGrid>
-      <div>
-        <FooterSocialGrid>
-          <SocialIcon className="fab fa-facebook-f fa-3x" />
-          <SocialIcon className="fab fa-twitter fa-3x" />
-          <SocialIcon className="fab fa-instagram fa-3x" />
-          <SocialIcon className="fab fa-youtube fa-3x" />
-        </FooterSocialGrid>
-        <FooterCopyrightText>
-          ©Governors' Climate and Forests Task Force, 2019
-        </FooterCopyrightText>
-      </div>
-    </FooterMiniGrid>
-    <FooterMiniGrid>
-      <FooterTitle>With Support From:</FooterTitle>
-      <AcknowledgementsGrid>
-        <a href={GFW_URL}>
-          <Logo logo={GFWLogo} />
-        </a>
-        <a href={CIFOR_URL}>
-          <Logo logo={CIFORLogo} />
-        </a>
-        <a href={EII_URL}>
-          <Logo logo={EIILogo} />
-        </a>
-        <a href={TCG_URL}>
-          <Logo logo={TCGLogo} />
-        </a>
-      </AcknowledgementsGrid>
-      <div />
-    </FooterMiniGrid>
-  </FooterGrid>
-);
+const Footer = ({ content }) => {
+  const {
+    MORE,
+    WITH_SUPPORT_FROM,
+    ABOUT,
+    SOURCES,
+    CONTACTS,
+    BACK_TO_MAIN_SITE
+  } = content;
+
+  return (
+    <FooterGrid>
+      <FooterMiniGrid>
+        <FooterTitle>{MORE}</FooterTitle>
+        <FooterNavListGrid>
+          <FooterNavListItemGrid>
+            <Icon className="fas fa-info" />
+            <span className="menu-text">{ABOUT}</span>
+          </FooterNavListItemGrid>
+          <FooterNavListItemGrid>
+            <Icon className="far fa-file-pdf" />
+            <span className="menu-text">{SOURCES}</span>
+          </FooterNavListItemGrid>
+          <FooterNavListItemGrid>
+            <Icon className="far fa-address-book" />
+            <span className="menu-text">{CONTACTS}</span>
+          </FooterNavListItemGrid>
+          <FooterNavListItemGrid>
+            <Icon className="fas fa-home" />
+            <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
+          </FooterNavListItemGrid>
+        </FooterNavListGrid>
+        <div>
+          <FooterSocialGrid>
+            <SocialIcon className="fab fa-facebook-f fa-3x" />
+            <SocialIcon className="fab fa-twitter fa-3x" />
+            <SocialIcon className="fab fa-instagram fa-3x" />
+            <SocialIcon className="fab fa-youtube fa-3x" />
+          </FooterSocialGrid>
+          <FooterCopyrightText>
+            ©Governors' Climate and Forests Task Force, 2019
+          </FooterCopyrightText>
+        </div>
+      </FooterMiniGrid>
+      <FooterMiniGrid>
+        <FooterTitle>{WITH_SUPPORT_FROM}</FooterTitle>
+        <AcknowledgementsGrid>
+          <a href={GFW_URL}>
+            <Logo logo={GFWLogo} />
+          </a>
+          <a href={CIFOR_URL}>
+            <Logo logo={CIFORLogo} />
+          </a>
+          <a href={EII_URL}>
+            <Logo logo={EIILogo} />
+          </a>
+          <a href={TCG_URL}>
+            <Logo logo={TCGLogo} />
+          </a>
+        </AcknowledgementsGrid>
+        <div />
+      </FooterMiniGrid>
+    </FooterGrid>
+  );
+};
 
 export default Footer;

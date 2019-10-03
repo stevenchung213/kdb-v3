@@ -15,6 +15,7 @@ const LandingGrid = styled.div`
   display: grid;
   padding-top: 75px;
   grid-template-rows: 8fr 8fr 5fr 4fr;
+  /* grid-template-columns: auto; */
   /* grid-template-areas: "navbar navbar"
                        "jumbotron jumbotron"
                        "map map"
@@ -23,13 +24,16 @@ const LandingGrid = styled.div`
   height: 2265px;
 `;
 
-const Landing = () => (
-  <LandingGrid>
-    <Jumbotron />
-    <Map />
-    <SellingPoints />
-    <Footer />
-  </LandingGrid>
-);
+const Landing = ({ content }) => {
+  const { jumbotron, map, sellingPoints, footer } = content;
+  return (
+    <LandingGrid>
+      <Jumbotron content={jumbotron} />
+      <Map content={map} />
+      <SellingPoints content={sellingPoints} />
+      <Footer content={footer} />
+    </LandingGrid>
+  );
+}
 
 export default Landing;
