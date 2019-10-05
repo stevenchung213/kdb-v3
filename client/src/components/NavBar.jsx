@@ -9,7 +9,8 @@ import GCFTFLogo from '../../dist/assets/logos/GCFTF.png';
 
 const NavBarGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr minmax(250px, 4.5fr) minmax(143px, 1.5fr) 1fr 1fr minmax(350px, 3fr);
+  /* grid-template-columns: 1fr minmax(250px, 4.5fr) minmax(143px, 1.5fr) 1fr 1fr minmax(350px, 3fr); */
+  grid-template-columns: 1fr minmax(210px, 4.5fr) minmax(215px, 1.5fr) minmax(auto, auto) auto minmax(280px, 3fr);
   grid-gap: 10px;
   align-items: center;
   background-color: white;
@@ -48,7 +49,8 @@ const NavLink = styled.div`
   font-weight: 600;
   height: 100%
   width: 100%;
-  text-align: center;
+  text-align: right;
+  padding: 0 5px;
   line-height: 75px;
   transition: color 0.4s ease 0.05s;
   &:hover {
@@ -64,13 +66,15 @@ const SearchBar = styled.div`
   height: 50%;
   place-self: center;
   width: 90%;
+  min-width: 252px;
   /* border: 1px dashed red; */
   /* position: relative; */
 `;
 
 const SearchBarInput = styled.input`
   height: 100%;
-  width: 85%;
+  width: 84%;
+  min-width: 208px;
   border: 3px solid #3E522D;
   border-right: none;
   padding: 5px;

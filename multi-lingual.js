@@ -69,7 +69,7 @@ module.exports = {
   },
   fr: {
     navBar: {
-      NAVIGATE_DATABASE: 'Naviguer dans la Base de Données',
+      NAVIGATE_DATABASE: 'Naviguer Base de Données',
       ABOUT: 'À Propos',
       CONTACT: 'Contact',
       SEARCH_PLACEHOLDER: 'Chercher',
@@ -137,7 +137,7 @@ module.exports = {
   },
   pt: {
     navBar: {
-      NAVIGATE_DATABASE: 'Navegar no Banco de Dados',
+      NAVIGATE_DATABASE: 'Navegar Banco de Dados',
       ABOUT: 'Sobre',
       CONTACT: 'Contato',
       SEARCH_PLACEHOLDER: 'Procurar',
