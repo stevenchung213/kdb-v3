@@ -74,10 +74,12 @@ const SearchBar = styled.div`
 const SearchBarInput = styled.input`
   height: 100%;
   width: 84%;
+  /* width: calc(100% - 40px); */
   min-width: 208px;
   border: 3px solid #3E522D;
   border-right: none;
   padding: 5px;
+  /* padding-right: 40px; */
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
