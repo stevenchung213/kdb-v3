@@ -101,13 +101,13 @@ const SearchBarButton = styled.button`
   font-size: 14px;
 `;
 
-const NavBar = ({ content }) => {
+const NavBar = ({ content, toggleModal }) => {
   const { NAVIGATE_DATABASE, ABOUT, CONTACT, SEARCH_PLACEHOLDER } = content;
 
   return (
     <NavBarGrid>
       <Logo />
-      <NavTitle>
+      <NavTitle onClick={toggleModal}>
         Knowledge Database
       </NavTitle>
       <NavLink>{NAVIGATE_DATABASE}</NavLink>
