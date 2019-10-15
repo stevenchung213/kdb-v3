@@ -10,12 +10,16 @@ import EIILogo from '../../dist/assets/logos/EII.png';
 import GFWLogo from '../../dist/assets/logos/GFW.png';
 import TCGLogo from '../../dist/assets/logos/TCG.png';
 
+const FACEBOOK_URL = 'https://www.facebook.com/gcf.taskforce';
+const CIFOR_URL = 'https://www.cifor.org';
+const EII_URL = 'https://www.earthinnovation.org';
 const GCFTF_URL = 'https://www.gcftf.org';
 const GCFTF_KDB_URL = 'https://www.gcftaskforce-database.org';
 const GFW_URL = 'https://www.globalforestwatch.org';
-const CIFOR_URL = 'https://www.cifor.org';
-const EII_URL = 'https://www.earthinnovation.org';
+const INSTAGRAM_URL = 'https://www.instagram.com/gcftaskforce/';
 const TCG_URL = 'https://www.theclimategroup.org';
+const TWITTER_URL = 'https://twitter.com/gcftaskforce';
+const YOUTUBE_URL = 'https://www.youtube.com/channel/UCI4m4y7gTCa_o75aGBXNOaw';
 
 const FooterGrid = styled.div`
   display: grid;
@@ -56,13 +60,15 @@ const FooterNavListGrid = styled.div`
 const FooterNavListItemGrid = styled.div`
   display: grid;
   grid-template-columns: 30px auto 4fr;
+  color: white;
+  cursor: pointer;
   transition: color 0.4s ease 0.05s;
   &:hover {
-    color: #582399;
+    /* color: #582399; */
     /* color: #b0cf44; */
     /* color: #c2e645; */
     /* color: #bfe639; */
-    /* color: #b5db37; */
+    color: #b5db37;
   }
 `;
 
@@ -80,6 +86,7 @@ const Icon = styled.i`
 
 const SocialIcon = styled.i`
   /* grid-area: logo; */
+  color: white;
   place-self: start;
   transition: color 0.6s ease 0s;
   &:hover {
@@ -98,8 +105,8 @@ const Logo = styled.div`
   place-self: top;
   background: ${({ logo }) => `no-repeat center/100% url(${logo}`});
   /* border: 2px solid black; */
-  width: 130px;
   height: 130px;
+  width: 130px;
 `;
 
 // const AcknowledgementsNote = styled.h5`
@@ -133,17 +140,27 @@ const Footer = ({ content }) => {
             <Icon className="far fa-address-book" />
             <span className="menu-text">{CONTACTS}</span>
           </FooterNavListItemGrid>
-          <FooterNavListItemGrid>
-            <Icon className="fas fa-home" />
-            <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
-          </FooterNavListItemGrid>
+          <a href={GCFTF_URL} rel="noopener noreferrer" style={{ textDecoration: 'none' }} target="_blank">
+            <FooterNavListItemGrid>
+              <Icon className="fas fa-home" />
+              <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
+            </FooterNavListItemGrid>
+          </a>
         </FooterNavListGrid>
         <div>
           <FooterSocialGrid>
-            <SocialIcon className="fab fa-facebook-f fa-3x" />
-            <SocialIcon className="fab fa-twitter fa-3x" />
-            <SocialIcon className="fab fa-instagram fa-3x" />
-            <SocialIcon className="fab fa-youtube fa-3x" />
+            <a href={FACEBOOK_URL} rel="noopener noreferrer" target="_blank">
+              <SocialIcon className="fab fa-facebook-f fa-3x" />
+            </a>
+            <a href={TWITTER_URL} rel="noopener noreferrer" target="_blank">
+              <SocialIcon className="fab fa-twitter fa-3x" />
+            </a>
+            <a href={INSTAGRAM_URL} rel="noopener noreferrer" target="_blank">
+              <SocialIcon className="fab fa-instagram fa-3x" />
+            </a>
+            <a href={YOUTUBE_URL} rel="noopener noreferrer" target="_blank">
+              <SocialIcon className="fab fa-youtube fa-3x" />
+            </a>
           </FooterSocialGrid>
           <FooterCopyrightText>
             ©Governors' Climate and Forests Task Force, 2019
