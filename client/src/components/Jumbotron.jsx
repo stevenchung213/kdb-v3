@@ -61,6 +61,7 @@ const JumbotronTitle = styled.div`
   transition: color 0.4s ease 0.05s;
   &:hover {
     color: #582399;
+    cursor: default;
 `;
 
 const JumbotronDescription = styled.div`

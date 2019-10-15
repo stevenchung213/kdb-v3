@@ -42,6 +42,7 @@ const NavTitle = styled.div`
   transition: color 0.4s ease 0.05s;
   &:hover {
     color: #582399;
+    cursor: pointer;
 `;
 
 const NavLink = styled.div`
@@ -59,6 +60,7 @@ const NavLink = styled.div`
     /* color: #c2e645; */
     /* color: #bfe639; */
     /* color: #b5db37; */
+    cursor: pointer;
   }
 `;
 
