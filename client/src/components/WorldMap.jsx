@@ -73,15 +73,15 @@ ReactFC.fcRoot(
 
 const dataSource = {
   chart: {
-    caption: 'GCF National Influence',
-    subcaption: 'By Number of GCF States/Provinces',
+    caption: 'GCF Task Force National Influence',
+    subcaption: 'By Number of GCF Task Force States/Provinces',
     numbersuffix: '',
     // includevalueinlabels: '1',
     // labelsepchar: ': ',
     showentitytooltip: '1',
     showentityhovereffect: '1',
     entityToolText:
-      "<div style='font-size:14px; text-align:center; padding: 2px 4px 2px 4px; color:black;'>$lName</div><div style='font-size:12px; color:black;'>GCF States & Provinces: <b>$value</b></div>",
+      "<div style='font-size:14px; text-align:center; padding: 2px 4px 2px 4px; color:black;'>$lName</div><div style='font-size:12px; color:black;'>States & Provinces: <b>$value</b></div>",
     entityFillHoverColor: '#FFF9C4',
     theme: 'fusion',
     nullentitycolor: '#C3D2DA',
