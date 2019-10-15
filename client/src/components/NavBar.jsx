@@ -115,7 +115,7 @@ const NavBar = ({ content, toggleLanguage, toggleModal }) => {
       <a href={GCFTF_KDB_URL} style={{ 'place-self': 'center' }}>
         <Logo />
       </a>
-      <NavTitle>
+      <NavTitle onClick={toggleModal}>
         Knowledge Database
       </NavTitle>
 
