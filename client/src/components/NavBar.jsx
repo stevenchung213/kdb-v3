@@ -7,6 +7,8 @@ import styled from 'styled-components';
 
 import GCFTFLogo from '../../dist/assets/logos/GCFTF.png';
 
+const GCFTF_KDB_URL = 'https://www.gcftaskforce-database.org';
+
 const NavBarGrid = styled.div`
   display: grid;
   /* grid-template-columns: 1fr minmax(250px, 4.5fr) minmax(143px, 1.5fr) 1fr 1fr minmax(350px, 3fr); */
@@ -108,7 +110,9 @@ const NavBar = ({ content }) => {
 
   return (
     <NavBarGrid>
-      <Logo />
+      <a href={GCFTF_KDB_URL} style={{ 'place-self': 'center' }}>
+        <Logo />
+      </a>
       <NavTitle>
         Knowledge Database
       </NavTitle>
