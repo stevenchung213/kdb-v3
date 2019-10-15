@@ -5,6 +5,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import LanguageSelect from './LanguageSelect';
+
 import CIFORLogo from '../../dist/assets/logos/CIFOR.png';
 import EIILogo from '../../dist/assets/logos/EII.png';
 import GFWLogo from '../../dist/assets/logos/GFW.png';

@@ -5,6 +5,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import LanguageSelect from './LanguageSelect';
+
 import GCFTFLogo from '../../dist/assets/logos/GCFTF.png';
 
 const GCFTF_KDB_URL = 'https://www.gcftaskforce-database.org';
@@ -12,7 +14,7 @@ const GCFTF_KDB_URL = 'https://www.gcftaskforce-database.org';
 const NavBarGrid = styled.div`
   display: grid;
   /* grid-template-columns: 1fr minmax(250px, 4.5fr) minmax(143px, 1.5fr) 1fr 1fr minmax(350px, 3fr); */
-  grid-template-columns: 1fr minmax(210px, 4.5fr) minmax(215px, 1.5fr) minmax(auto, auto) auto minmax(280px, 3fr);
+  grid-template-columns: 1fr minmax(210px, 4.5fr) minmax(75px, 1.5fr) minmax(auto, auto) auto 100px minmax(280px, 3fr);
   grid-gap: 10px;
   align-items: center;
   background-color: white;
@@ -105,8 +107,8 @@ const SearchBarButton = styled.button`
   font-size: 14px;
 `;
 
-const NavBar = ({ content }) => {
-  const { NAVIGATE_DATABASE, ABOUT, CONTACT, SEARCH_PLACEHOLDER } = content;
+const NavBar = ({ content, toggleLanguage, toggleModal }) => {
+  const { NAVIGATE, ABOUT, CONTACT, SEARCH_PLACEHOLDER } = content;
 
   return (
     <NavBarGrid>
@@ -116,9 +118,11 @@ const NavBar = ({ content }) => {
       <NavTitle>
         Knowledge Database
       </NavTitle>
-      <NavLink>{NAVIGATE_DATABASE}</NavLink>
+
       <NavLink>{ABOUT}</NavLink>
+      <NavLink>{NAVIGATE}</NavLink>
       <NavLink>{CONTACT}</NavLink>
+      <LanguageSelect toggleLanguage={toggleLanguage} />
       <SearchBar>
         <SearchBarInput placeholder={SEARCH_PLACEHOLDER} type="text" />
         <SearchBarButton>
@@ -130,3 +134,6 @@ const NavBar = ({ content }) => {
 };
 
 export default NavBar;
+
+// <LanguageSelect toggleLanguage={toggleLanguage} />
+// <NavLink>{NAVIGATE_DATABASE}</NavLink>
