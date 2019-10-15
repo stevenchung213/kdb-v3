@@ -1,7 +1,7 @@
 module.exports = {
   en: {
     navBar: {
-      NAVIGATE_DATABASE: 'Navigate Database',
+      NAVIGATE: 'Navigate',
       ABOUT: 'About',
       CONTACT: 'Contact',
       SEARCH_PLACEHOLDER: 'Search',
@@ -35,7 +35,7 @@ module.exports = {
   },
   es: {
     navBar: {
-      NAVIGATE_DATABASE: 'Navegar base de datos',
+      NAVIGATE: 'Navegar',
       ABOUT: 'Acerca de',
       CONTACT: 'Contacto',
       SEARCH_PLACEHOLDER: 'Buscar',
@@ -69,7 +69,7 @@ module.exports = {
   },
   fr: {
     navBar: {
-      NAVIGATE_DATABASE: 'Naviguer Base de Données',
+      NAVIGATE: 'Naviguer',
       ABOUT: 'À Propos',
       CONTACT: 'Contact',
       SEARCH_PLACEHOLDER: 'Chercher',
@@ -103,7 +103,7 @@ module.exports = {
   },
   id: {
     navBar: {
-      NAVIGATE_DATABASE: 'Navigasi Basis Data',
+      NAVIGATE: 'Navigasi',
       ABOUT: 'Tentang',
       CONTACT: 'Kontak',
       SEARCH_PLACEHOLDER: 'Cari',
@@ -137,7 +137,7 @@ module.exports = {
   },
   pt: {
     navBar: {
-      NAVIGATE_DATABASE: 'Navegar Banco de Dados',
+      NAVIGATE: 'Navegar',
       ABOUT: 'Sobre',
       CONTACT: 'Contato',
       SEARCH_PLACEHOLDER: 'Procurar',

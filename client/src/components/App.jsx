@@ -7,7 +7,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Landing from './Landing';
-import LanguageSelect from './LanguageSelect';
+// import LanguageSelect from './LanguageSelect';
 import Modal from './Modal';
 import NavBar from './NavBar';
 
@@ -52,8 +52,11 @@ class App extends React.Component {
 
     return (
       <AppContainer>
-        <LanguageSelect toggleLanguage={this.toggleLanguage} />
-        <NavBar content={navBar} toggleModal={this.toggleModal} />
+        <NavBar
+          content={navBar}
+          toggleLanguage={this.toggleLanguage}
+          toggleModal={this.toggleModal}
+        />
         {modalBox}
         <Landing content={landingPage} />
       </AppContainer>

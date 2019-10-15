@@ -10,12 +10,13 @@ import LANGUAGES from '../const/languages';
 const StyledSelect = styled.select`
   color: #444;
   display: block;
+  justify-self: end;
   font-size: 14px;
   font-family: AvenirNext, sans-serif;
   font-weight: 600;
   line-height: 1.3;
   padding: .6em 1.4em .5em .8em;
-  width: 100%;
+  width: 120px;
   max-width: 100%;
   box-sizing: border-box;
   margin: 0;
