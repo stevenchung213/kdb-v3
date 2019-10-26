@@ -128,7 +128,7 @@ module.exports = {
       footer: {
         MORE: 'Lebih:',
         WITH_SUPPORT_FROM: 'Dengan Dukungan Dari:',
-        ABOUT: ' TENTANG',
+        ABOUT: ' Tentang',
         SOURCES: ' Sumber',
         CONTACTS: ' Kontak',
         BACK_TO_MAIN_SITE: ' Kembali ke Situs Utama',
