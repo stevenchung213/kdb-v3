@@ -422,7 +422,7 @@ const dataSource = {
       id: 'indonesia',
       linkedchart: {
         chart: {
-          caption: 'Indnesia Caption',
+          caption: 'Indonesia Caption',
           subcaption: 'Last year',
           entityFillHoverColor: '#cccccc',
           entityToolText: "<div style='font-size:14px; text-align:center; padding: 2px 4px 2px 4px; color:black;'>$lName</div><div style='font-size:12px; text-align:center; color:black;'>Total Forest Area: <b>$value km<sup>2</sup></b></div>",
@@ -438,13 +438,19 @@ const dataSource = {
           gradient: '1',
           color: [
             {
-              minvalue: '1',
-              maxvalue: '5',
+              minvalue: '0',
+              maxvalue: '50000',
               color: '#8AB458',
             },
             {
-              minvalue: '6',
-              maxvalue: '9',
+              minvalue: '50000',
+              maxvalue: '90000',
+              color: '#7a9450',
+              // color: '#3E522D'
+            },
+            {
+              minvalue: '90000',
+              maxvalue: '250000',
               color: '#426539',
               // color: '#3E522D'
             },
@@ -454,43 +460,43 @@ const dataSource = {
         data: [
           {
             id: '01',
-            value: '5',
+            value: '31600',
             link: 'newchart-json-specialregionofaceh',
             showLabel: '1',
           },
           {
             id: '13',
-            value: '5',
+            value: '80200',
             link: 'newchart-json-centralkalimantan',
             showLabel: '1',
           },
           {
             id: '14',
-            value: '5',
+            value: '62200',
             link: 'newchart-json-eastkalimantan',
             showLabel: '1',
           },
           {
             id: '42',
-            value: '5',
+            value: '58900',
             link: 'newchart-json-northkalimantan',
             showLabel: '1',
           },
           {
             id: '11',
-            value: '5',
+            value: '61500',
             // link: 'newchart-json-westkalimantan',
             showLabel: '1',
           },
           {
             id: '36',
-            value: '5',
+            value: '249284',
             // link: 'newchart-json-specialregionofpapua',
             showLabel: '1',
           },
           {
             id: '39',
-            value: '5',
+            value: '90500',
             // link: 'newchart-json-specialregionofwestpapua',
             showLabel: '1',
           },
