@@ -3,240 +3,10 @@
  */
 
 import React from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const jurisdictions = [
-  null,
-  {
-    NAME: 'Brazil',
-    URL: '/brazil',
-  },
-  {
-    NAME: 'Indonesia',
-    URL: '/indonesia',
-  },
-  {
-    NAME: 'Mexico',
-    URL: '/mexico',
-  },
-  {
-    NAME: 'Peru',
-    URL: '/peru',
-  },
-  {
-    NAME: 'Ivory Coast',
-    URL: '/cotedivoire',
-  },
-  {
-    NAME: 'Colombia',
-    URL: '/colombia',
-  },
-  {
-    NAME: 'Ecuador',
-    URL: '/ecuador',
-  },
-  {
-    NAME: 'Nigeria',
-    URL: '/nigeria',
-  },
-  null,
-  null,
-  {
-    NAME: 'Acre',
-    URL: '/brazil/acre',
-  },
-  {
-    NAME: 'Aceh',
-    URL: '/indonesia/aceh',
-  },
-  {
-    NAME: 'Campeche',
-    URL: '/mexico/campeche',
-  },
-  {
-    NAME: 'Amazonas',
-    URL: '/peru/amazonas',
-  },
-  {
-    NAME: 'Bélier',
-    URL: '/cotedivoire/bélier',
-  },
-  {
-    NAME: 'Caquetá',
-    URL: '/columbia/caquetá',
-  },
-  {
-    NAME: 'Pastaza',
-    URL: '/pastaza',
-  },
-  {
-    NAME: 'Cross River',
-    URL: '/nigeria/crossriver',
-  },
-  null,
-  null,
-  {
-    NAME: 'Amapá',
-    URL: '/brazil/amapa',
-  },
-  {
-    NAME: 'C. Kalimantan',
-    URL: '/indonesia/centralkalimantan',
-  },
-  {
-    NAME: 'Chiapas',
-    URL: '/mexico/chiapas',
-  },
-  {
-    NAME: 'Huánuco',
-    URL: '/peru/huánuco',
-  },
-  {
-    NAME: 'Cavally',
-    URL: '/cotedivoire/cavally',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Amazonas',
-    URL: '/brazil/amazonas',
-  },
-  {
-    NAME: 'E. Kalimantan',
-    URL: '/indonesia/easternkalimantan',
-  },
-  {
-    NAME: 'Jalisco',
-    URL: '/mexico/jalisco',
-  },
-  {
-    NAME: 'Loreto',
-    URL: '/peru/loreto',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Maranhão',
-    URL: '/brazil/maranhão',
-  },
-  {
-    NAME: 'N. Kalimantan',
-    URL: '/indonesia/northkalimantan',
-  },
-  {
-    NAME: 'Oaxaca',
-    URL: '/mexico/oaxaca',
-  },
-  {
-    NAME: 'Madre de Dios',
-    URL: '/peru/madrededios',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Mato Grosso',
-    URL: '/brazil/matogrosso',
-  },
-  {
-    NAME: 'W. Kalimantan',
-    URL: '/indonesia/westkalimantan',
-  },
-  {
-    NAME: 'Quintana Roo',
-    URL: '/mexico/quintanaroo',
-  },
-  {
-    NAME: 'Piura',
-    URL: '/peru/piura',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Pará',
-    URL: '/brazil/pará',
-  },
-  {
-    NAME: 'Papua',
-    URL: '/indonesia/papua',
-  },
-  {
-    NAME: 'Tabasco',
-    URL: '/mexico/tabasco',
-  },
-  {
-    NAME: 'San Martín',
-    URL: '/peru/sanmartín',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Rondônia',
-    URL: '/brazil/rondônia',
-  },
-  {
-    NAME: 'West Papua',
-    URL: '/indonesia/westpapua',
-  },
-  {
-    NAME: 'Yucatán',
-    URL: '/mexico/yucatán',
-  },
-  {
-    NAME: 'Ucayali',
-    URL: '/peru/ucayali',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Roraima',
-    URL: '/brazil/roraima',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  {
-    NAME: 'Tocantins',
-    URL: '/brazil/tocantins',
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-];
+import jurisdictions from '../const/jurisdictions';
 
 const ModalBox = styled.div`
   display: block;
@@ -249,8 +19,8 @@ const ModalBox = styled.div`
   /* left: 130px; */
   /* right: 180px; */
   background-color: white;
-  border-top: 2px solid #3E522D;
-  z-index: 100;
+  /* border-top: 2px solid #3E522D; */
+  z-index: 999;
   transition: border 0.6s ease 0s, background-color 0.6s ease 0s, color 0.6s ease 0s;
   /* box-shadow: 0px 6px 6px rgba(0,0,0,0.8); */
 `;
@@ -288,22 +58,24 @@ const MemberStatesGrid = styled.div`
 
 const ModalFade = styled.div`
   position: absolute;
-  top: 475;
+  top: 475px;
   /* top: 75; */
   left: 0;
   bottom: 0;
   right: 0;
   height: 1790px;
-  /* height: '2190px'; */
+  /* height: 2190px; */
   background: rgba(0, 0, 0, 0.6);
-  z-index: 10;
+  z-index: 998;
 `;
 
-const ModalNation = styled.div`
+const ModalNationLink = styled(Link)`
+  color: black;
   font-size: 18px;
   font-weight: 600;
   justify-self: left;
   margin-left: 30%;
+  text-decoration: none;
   transition: color 0.1s ease 0, font-size 0.1s ease 0, text-shadow 0.1s ease 0;
   &:hover {
     color: #3E522D;
@@ -317,10 +89,12 @@ const ModalNation = styled.div`
   }
 `;
 
-const ModalState = styled.div`
+const ModalStateLink = styled(Link)`
+  color: black;
   font-size: 13px;
   justify-self: left;
   margin-left: 30%;
+  text-decoration: none;
   transition: color 0.4s ease 0, font-size 0.8s ease 0.5s, font-weight ease 0.4s 0;
   &:hover {
     color: #3E522D;
@@ -348,10 +122,25 @@ const Modal = ({ toggleModal }) => {
             }
 
             if (index < 11) {
-              return <ModalNation key={index}>{jurisdiction.NAME}</ModalNation>
+              return (
+                <ModalNationLink
+                  key={index}
+                  to={jurisdiction.URL}
+                  onClick={toggleModal}
+                >
+                  {jurisdiction.NAME}
+                </ModalNationLink>
+              );
             }
-
-            return <ModalState key={index}>{jurisdiction.NAME}</ModalState>
+            return (
+              <ModalStateLink
+                key={index}
+                to={jurisdiction.URL}
+                onClick={toggleModal}
+              >
+                {jurisdiction.NAME}
+              </ModalStateLink>
+            );
           })}
         </MemberStatesGrid>
       </ModalBox>

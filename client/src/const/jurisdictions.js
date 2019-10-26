@@ -1,0 +1,231 @@
+export default [
+  null,
+  {
+    NAME: 'Brazil',
+    URL: '/brazil',
+  },
+  {
+    NAME: 'Indonesia',
+    URL: '/indonesia',
+  },
+  {
+    NAME: 'Mexico',
+    URL: '/mexico',
+  },
+  {
+    NAME: 'Peru',
+    URL: '/peru',
+  },
+  {
+    NAME: 'Ivory Coast',
+    URL: '/cotedivoire',
+  },
+  {
+    NAME: 'Colombia',
+    URL: '/colombia',
+  },
+  {
+    NAME: 'Ecuador',
+    URL: '/ecuador',
+  },
+  {
+    NAME: 'Nigeria',
+    URL: '/nigeria',
+  },
+  null,
+  null,
+  {
+    NAME: 'Acre',
+    URL: '/brazil/acre',
+  },
+  {
+    NAME: 'Aceh',
+    URL: '/indonesia/aceh',
+  },
+  {
+    NAME: 'Campeche',
+    URL: '/mexico/campeche',
+  },
+  {
+    NAME: 'Amazonas',
+    URL: '/peru/amazonas',
+  },
+  {
+    NAME: 'Bélier',
+    URL: '/cotedivoire/belier',
+  },
+  {
+    NAME: 'Caquetá',
+    URL: '/colombia/caqueta',
+  },
+  {
+    NAME: 'Pastaza',
+    URL: '/ecuador/pastaza',
+  },
+  {
+    NAME: 'Cross River',
+    URL: '/nigeria/crossriver',
+  },
+  null,
+  null,
+  {
+    NAME: 'Amapá',
+    URL: '/brazil/amapa',
+  },
+  {
+    NAME: 'C. Kalimantan',
+    URL: '/indonesia/centralkalimantan',
+  },
+  {
+    NAME: 'Chiapas',
+    URL: '/mexico/chiapas',
+  },
+  {
+    NAME: 'Huánuco',
+    URL: '/peru/huanuco',
+  },
+  {
+    NAME: 'Cavally',
+    URL: '/cotedivoire/cavally',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Amazonas',
+    URL: '/brazil/amazonas',
+  },
+  {
+    NAME: 'E. Kalimantan',
+    URL: '/indonesia/easternkalimantan',
+  },
+  {
+    NAME: 'Jalisco',
+    URL: '/mexico/jalisco',
+  },
+  {
+    NAME: 'Loreto',
+    URL: '/peru/loreto',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Maranhão',
+    URL: '/brazil/maranhao',
+  },
+  {
+    NAME: 'N. Kalimantan',
+    URL: '/indonesia/northkalimantan',
+  },
+  {
+    NAME: 'Oaxaca',
+    URL: '/mexico/oaxaca',
+  },
+  {
+    NAME: 'Madre de Dios',
+    URL: '/peru/madrededios',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Mato Grosso',
+    URL: '/brazil/matogrosso',
+  },
+  {
+    NAME: 'W. Kalimantan',
+    URL: '/indonesia/westkalimantan',
+  },
+  {
+    NAME: 'Quintana Roo',
+    URL: '/mexico/quintanaroo',
+  },
+  {
+    NAME: 'Piura',
+    URL: '/peru/piura',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Pará',
+    URL: '/brazil/para',
+  },
+  {
+    NAME: 'Papua',
+    URL: '/indonesia/papua',
+  },
+  {
+    NAME: 'Tabasco',
+    URL: '/mexico/tabasco',
+  },
+  {
+    NAME: 'San Martín',
+    URL: '/peru/sanmartin',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Rondônia',
+    URL: '/brazil/rondonia',
+  },
+  {
+    NAME: 'West Papua',
+    URL: '/indonesia/westpapua',
+  },
+  {
+    NAME: 'Yucatán',
+    URL: '/mexico/yucatan',
+  },
+  {
+    NAME: 'Ucayali',
+    URL: '/peru/ucayali',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Roraima',
+    URL: '/brazil/roraima',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {
+    NAME: 'Tocantins',
+    URL: '/brazil/tocantins',
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+];
