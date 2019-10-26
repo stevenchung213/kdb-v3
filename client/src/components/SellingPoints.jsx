@@ -9,7 +9,10 @@ const SellingPointsGrid = styled.div`
   display: grid;
   /* grid-area: sellingpoints; */
   grid-template-rows: 2fr 7fr;
-  background-color: lightgreen;
+  /* background-color: #eeeeee; */
+  /* background-color: #C3D2DA; */
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
 `;
 
 const SellingPointsMiniGrid = styled.div`
@@ -27,9 +30,11 @@ const SellingPointsTitle = styled.h1`
 
 const Square = styled.div`
   place-self: center;
-  border: 2px solid black;
   height: 239px;
   width: 239px;
+  background-color: white;
+  border-radius:5px;
+  box-shadow: 6px 18px 18px rgba(0, 0, 0, 0.08), -6px 18px 18px rgba(0, 0, 0, 0.08);
 `;
 
 const SellingPoints = ({ content }) => {
