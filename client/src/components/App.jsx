@@ -3,15 +3,18 @@
  */
 
 import React from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Landing from './Landing';
-// import LanguageSelect from './LanguageSelect';
 import Modal from './Modal';
 import NavBar from './NavBar';
+import UnderConstruction from './UnderConstruction';
 
 import content from '../../../multi-lingual';
+import jurisdictions from '../const/jurisdictions';
+
+const ROUTES = jurisdictions.filter(jurisdiction => jurisdiction);
 
 const AppContainer = styled.div`
   height: 100%;
@@ -51,15 +54,31 @@ class App extends React.Component {
     const modalBox = showModal ? <Modal toggleModal={this.toggleModal} /> : null;
 
     return (
-      <AppContainer>
-        <NavBar
-          content={navBar}
-          toggleLanguage={this.toggleLanguage}
-          toggleModal={this.toggleModal}
-        />
-        {modalBox}
-        <Landing content={landingPage} />
-      </AppContainer>
+      <Switch>
+        <Route exact path="/">
+          <AppContainer>
+            <NavBar
+              content={navBar}
+              toggleLanguage={this.toggleLanguage}
+              toggleModal={this.toggleModal}
+            />
+            {modalBox}
+            <Landing content={landingPage} />
+          </AppContainer>
+        </Route>
+        {ROUTES.map(({ NAME, URL }) => (
+          <Route exact path={URL} key={NAME}>
+            <UnderConstruction
+              endpoint={URL}
+              navBarContent={navBar}
+              footerContent={landingPage.footer}
+              toggleLanguage={this.toggleLanguage}
+              toggleModal={this.toggleModal}
+              showModal={showModal}
+            />
+          </Route>
+        ))}
+      </Switch>
     );
   }
 }
