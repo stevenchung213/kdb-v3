@@ -23,6 +23,7 @@ const NavBarGrid = styled.div`
   position: fixed;
   width: 100%;
   z-index: 999;
+  border-bottom: 3px solid #3E522D;
 `;
 
 const Logo = styled.div`
@@ -112,7 +113,7 @@ const NavBar = ({ content, toggleLanguage, toggleModal }) => {
 
   return (
     <NavBarGrid>
-      <a href={GCFTF_KDB_URL} style={{ 'place-self': 'center' }}>
+      <a href={GCFTF_KDB_URL} style={{ placeSelf: 'center' }}>
         <Logo />
       </a>
       <NavTitle onClick={toggleModal}>
