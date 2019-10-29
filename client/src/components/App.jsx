@@ -72,7 +72,7 @@ class App extends React.Component {
     const { navBar, landingPage } = content[language];
 
     const modalBox = showModal ? <Modal toggleModal={this.toggleModal} /> : null;
-    const hamburgerMenu = showHamburgerMenu ? <HamburgerMenu toggleHamburgerMenu={this.toggleHamburgerMenu} /> : null;
+    const hamburgerMenu = showHamburgerMenu ? <HamburgerMenu content={navBar} toggleHamburgerMenu={this.toggleHamburgerMenu} toggleLanguage={this.toggleLanguage} /> : null;
 
     return (
       <Switch>

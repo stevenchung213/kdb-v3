@@ -53,8 +53,11 @@ const StyledSelect = styled.select`
     font-weight: normal;
   }
 
-  @media (max-width: 990px) {
-    display: none;
+  @media (max-width: 991px) {
+    align-self: end;
+    justify-self: start;
+    margin-bottom: 12px;
+    width: 100%;
   }
 `;
 

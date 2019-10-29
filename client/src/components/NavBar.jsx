@@ -24,11 +24,12 @@ const NavBarGrid = styled.div`
   overflow: hidden;
   position: fixed;
   width: 100%;
+  min-width: 320px;
   z-index: 999;
   border-bottom: 3px solid #3E522D;
 
   @media (max-width: 990px) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-template-areas: 'logo navtitle hamburger';
     justify-content: space-between;
   }
@@ -42,7 +43,11 @@ const Logo = styled.div`
   height: 75px;
   margin-left: 10px;
   @media (max-width: 990px) {
-    margin-left: 3vw;
+    margin-left: 38.25px;
+  }
+
+  @media (max-width: 765px) {
+    margin-left: 5vw
   }
 `;
 
@@ -187,9 +192,10 @@ const HamburgerIcon = styled.i`
 
   /* color: #3E522D */
   font-size: 36px;
-  margin-right: 3vw;
+  margin-right: 5vw;
   transition: color 0.4s ease 0.05s;
   width: auto;
+  text-align: left;
 
   &:hover {
     color: #582399;
@@ -198,6 +204,14 @@ const HamburgerIcon = styled.i`
 
   @media (min-width: 991px) {
     display: none;
+  }
+
+  @media (max-width: 990px) {
+    margin-right: 38.25px;
+  }
+
+  @media (max-width: 765px) {
+    margin-right: 5vw
   }
 `;
 
