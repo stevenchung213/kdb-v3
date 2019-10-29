@@ -39,6 +39,8 @@ class App extends React.Component {
     this.setState({
       showModal: !showModal,
     });
+
+    document.body.style.overflow = showModal ? 'unset' : 'hidden';
   }
 
   toggleLanguage(event) {
