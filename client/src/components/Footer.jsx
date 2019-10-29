@@ -27,28 +27,88 @@ const FooterGrid = styled.div`
   display: grid;
   /* grid-area: footer; */
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 4.5fr 2fr 1fr;
+  align-items: center;
+
   background-color: #3E522D;
   color: white;
+
+  @media (max-width: 765px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1.5fr 2.5fr 1.5fr 3fr 1.5fr;
+    grid-row-gap: 20px;
+
+    grid-template-areas: 'backtomainsite2'
+                         'navlistgrid'
+                         'socialgrid'
+                         'withsupportfrom'
+                         'acknowledgementsgrid'
+                         'copyright';
+
+    /* height: 352px; */
+    height: 400px;
+  }
 `;
 
-const FooterMiniGrid = styled.div`
-  display: grid;
-  grid-template-rows: 2fr 4fr 3fr;
-  align-items: center;
-`;
+// const FooterMiniGrid = styled.div`
+//   display: grid;
+//   grid-template-rows: 2fr 4fr 2.5fr .5fr;
+//   align-items: center;
+//
+//   @media (max-width: 765px) {
+//     display: none;
+//   }
+// `;
 
 const AcknowledgementsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @media (max-width: 765px) {
+    // /* font-size: 20p18 */
+  }
   /* grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); */
-  /* align-items: center; */
+  align-items: center;
   justify-items: center;
-  grid-gap: 15px;
+  grid-column-gap: 22px;
   margin: 0 15px;
+  height: 100%;
+
+  @media (max-width: 1025px) {
+    grid-column: 2/3;
+    grid-row: 2/5;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 0;
+  }
+
+  @media (max-width: 765px) {
+    grid-area: acknowledgementsgrid;
+    grid-row: 5/6;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 1fr;
+    margin: 0 30px;
+    grid-column-gap: 15px;
+    align-items: start;
+  }
 `;
 
-const FooterTitle = styled.h3`
+const FooterTitle1 = styled.h3`
   margin: 0 15px;
+
+  @media (max-width: 765px) {
+    display: none;
+  }
+`;
+
+const FooterTitle2 = styled.h3`
+  margin: 0 15px;
+
+  @media (max-width: 765px) {
+    grid-area: withsupportfrom;
+    justify-self: center;
+    align-self: center;
+  }
 `;
 
 const FooterNavListGrid = styled.div`
@@ -57,6 +117,14 @@ const FooterNavListGrid = styled.div`
   grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 15px;
   margin: 15px;
+
+  @media (max-width: 765px) {
+    grid-area: navlistgrid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    margin: 0;
+  }
 `;
 
 const FooterNavListItemGrid = styled.div`
@@ -65,6 +133,7 @@ const FooterNavListItemGrid = styled.div`
   color: white;
   cursor: pointer;
   transition: color 0.4s ease 0.05s;
+
   &:hover {
     /* color: #582399; */
     /* color: #b0cf44; */
@@ -72,13 +141,26 @@ const FooterNavListItemGrid = styled.div`
     /* color: #bfe639; */
     color: #b5db37;
   }
+
+  @media (max-width: 765px) {
+    font-size: 18px;
+  }
 `;
 
 const FooterSocialGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, auto) 50%;
   grid-gap: 15px;
-  margin: 0 15px 15px 15px;
+  /* margin: 0 15px 15px 15px; */
+  margin-left: 15px;
+
+  @media (max-width: 765px) {
+    grid-area: socialgrid
+    grid-template-columns: repeat(4, auto);
+    justify-items: center;
+    margin-left: 0;
+    /* margin-right: 15px; */
+  }
 `;
 
 const Icon = styled.i`
@@ -99,21 +181,85 @@ const SocialIcon = styled.i`
 `;
 
 const FooterCopyrightText = styled.div`
-  margin: 0 15px;
+  grid-row: 4/5;
+  align-self: start;
+  margin-left: 15px;
+
+  @media (max-width: 765px) {
+    grid-area: copyright;
+    grid-column: 1/5;
+    text-align: center;
+    line-height: 50px;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: #b5db37;
+  }
+`;
+
+const LogoLink = styled.a`
+  width: 130px;
+  height: 130px;
+
+  @media (max-width: 1025px) {
+    height: 115px;
+    width: 115px;
+    margin-bottom: ${({ marginBottom }) => marginBottom || 0};
+  }
+
+  @media (max-width: 765px) {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 0;
+  }
 `;
 
 const Logo = styled.div`
   /* grid-area: logo; */
-  place-self: top;
   background: ${({ logo }) => `no-repeat center/100% url(${logo}`});
   /* border: 2px solid black; */
   height: 130px;
   width: 130px;
+
+  @media (max-width: 1025px) {
+    height: 115px;
+    width: 115px;
+  }
+
+  @media (max-width: 765px) {
+    height: 70px;
+    width: 70px;
+  }
 `;
 
 // const AcknowledgementsNote = styled.h5`
 //   margin: 0 15px;
 // `;
+
+const BackToMainSiteLink = styled.a`
+  textDecoration: none;
+
+  @media (max-width: 765px) {
+    /* grid-area: backtomainsite; */
+    /* grid-column: 1/5; */
+    justify-self: center;
+    display: none;
+  }
+`;
+
+const BackToMainSiteLink2 = styled.a`
+  display: none;
+  textDecoration: none;
+
+  @media (max-width: 765px) {
+    grid-area: backtomainsite2;
+    /* grid-column: 1/5; */
+    justify-self: center;
+    line-height: 50px;
+    display: initial;
+  }
+`;
 
 const Footer = ({ content }) => {
   const {
@@ -127,8 +273,11 @@ const Footer = ({ content }) => {
 
   return (
     <FooterGrid>
-      <FooterMiniGrid>
-        <FooterTitle>{MORE}</FooterTitle>
+
+        <FooterTitle1>{MORE}</FooterTitle1>
+
+        <FooterTitle2>{WITH_SUPPORT_FROM}</FooterTitle2>
+
         <FooterNavListGrid>
           <FooterNavListItemGrid>
             <Icon className="fas fa-info" />
@@ -142,51 +291,57 @@ const Footer = ({ content }) => {
             <Icon className="far fa-address-book" />
             <span className="menu-text">{CONTACTS}</span>
           </FooterNavListItemGrid>
-          <a href={GCFTF_URL} rel="noopener noreferrer" style={{ textDecoration: 'none' }} target="_blank">
+          <BackToMainSiteLink href={GCFTF_URL} rel="noopener noreferrer" target="_blank">
             <FooterNavListItemGrid>
               <Icon className="fas fa-home" />
               <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
             </FooterNavListItemGrid>
-          </a>
+          </BackToMainSiteLink>
         </FooterNavListGrid>
-        <div>
-          <FooterSocialGrid>
-            <a href={FACEBOOK_URL} rel="noopener noreferrer" target="_blank">
-              <SocialIcon className="fab fa-facebook-f fa-3x" />
-            </a>
-            <a href={TWITTER_URL} rel="noopener noreferrer" target="_blank">
-              <SocialIcon className="fab fa-twitter fa-3x" />
-            </a>
-            <a href={INSTAGRAM_URL} rel="noopener noreferrer" target="_blank">
-              <SocialIcon className="fab fa-instagram fa-3x" />
-            </a>
-            <a href={YOUTUBE_URL} rel="noopener noreferrer" target="_blank">
-              <SocialIcon className="fab fa-youtube fa-3x" />
-            </a>
-          </FooterSocialGrid>
-          <FooterCopyrightText>
-            ©Governors' Climate and Forests Task Force, 2019
-          </FooterCopyrightText>
-        </div>
-      </FooterMiniGrid>
-      <FooterMiniGrid>
-        <FooterTitle>{WITH_SUPPORT_FROM}</FooterTitle>
+
         <AcknowledgementsGrid>
-          <a href={GFW_URL}>
+          <LogoLink href={GFW_URL} marginBottom="25px">
             <Logo logo={GFWLogo} />
-          </a>
-          <a href={CIFOR_URL}>
+          </LogoLink>
+          <LogoLink href={CIFOR_URL} marginBottom="25px">
             <Logo logo={CIFORLogo} />
-          </a>
-          <a href={EII_URL}>
+          </LogoLink>
+          <LogoLink href={EII_URL} marginBottom="25px">
             <Logo logo={EIILogo} />
-          </a>
-          <a href={TCG_URL}>
+          </LogoLink>
+          <LogoLink href={TCG_URL} marginBottom="25px">
             <Logo logo={TCGLogo} />
-          </a>
+          </LogoLink>
         </AcknowledgementsGrid>
+
+        <FooterSocialGrid>
+          <a href={FACEBOOK_URL} rel="noopener noreferrer" target="_blank">
+            <SocialIcon className="fab fa-facebook-f fa-3x" />
+          </a>
+          <a href={TWITTER_URL} rel="noopener noreferrer" target="_blank">
+            <SocialIcon className="fab fa-twitter fa-3x" />
+          </a>
+          <a href={INSTAGRAM_URL} rel="noopener noreferrer" target="_blank">
+            <SocialIcon className="fab fa-instagram fa-3x" />
+          </a>
+          <a href={YOUTUBE_URL} rel="noopener noreferrer" target="_blank">
+            <SocialIcon className="fab fa-youtube fa-3x" />
+          </a>
+        </FooterSocialGrid>
+
+        <FooterCopyrightText>
+          ©Governors' Climate and Forests Task Force, 2019
+        </FooterCopyrightText>
+
+        <BackToMainSiteLink2 href={GCFTF_URL} rel="noopener noreferrer" target="_blank">
+          <FooterNavListItemGrid>
+            <Icon className="fas fa-home" />
+            <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
+          </FooterNavListItemGrid>
+        </BackToMainSiteLink2>
+
         <div />
-      </FooterMiniGrid>
+
     </FooterGrid>
   );
 };
