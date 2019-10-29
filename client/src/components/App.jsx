@@ -6,6 +6,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
+import HamburgerMenu from './HamburgerMenu';
 import Landing from './Landing';
 import Modal from './Modal';
 import NavBar from './NavBar';
@@ -26,21 +27,38 @@ class App extends React.Component {
     this.state = {
       language: 'en',
       showModal: false,
+      showHamburgerMenu: false,
     };
 
+    this.toggleHamburgerMenu = this.toggleHamburgerMenu.bind(this);
     this.toggleLanguage = this.toggleLanguage.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggleModal() {
-    const { showModal } = this.state;
+    const { showHamburgerMenu, showModal } = this.state;
 
     // history.goBack();
-    this.setState({
-      showModal: !showModal,
-    });
+    if (!showHamburgerMenu) {
+      document.body.style.overflow = showModal ? 'unset' : 'hidden';
 
-    document.body.style.overflow = showModal ? 'unset' : 'hidden';
+      this.setState({
+        showModal: !showModal,
+      });
+    }
+  }
+
+  toggleHamburgerMenu() {
+    const { showHamburgerMenu, showModal } = this.state;
+
+    // history.goBack();
+    if (!showModal) {
+      document.body.style.overflow = showHamburgerMenu ? 'unset' : 'hidden';
+
+      this.setState({
+        showHamburgerMenu: !showHamburgerMenu,
+      });
+    }
   }
 
   toggleLanguage(event) {
@@ -50,10 +68,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { language, showModal } = this.state;
+    const { language, showHamburgerMenu, showModal } = this.state;
     const { navBar, landingPage } = content[language];
 
     const modalBox = showModal ? <Modal toggleModal={this.toggleModal} /> : null;
+    const hamburgerMenu = showHamburgerMenu ? <HamburgerMenu toggleHamburgerMenu={this.toggleHamburgerMenu} /> : null;
 
     return (
       <Switch>
@@ -61,10 +80,12 @@ class App extends React.Component {
           <AppContainer>
             <NavBar
               content={navBar}
+              toggleHamburgerMenu={this.toggleHamburgerMenu}
               toggleLanguage={this.toggleLanguage}
               toggleModal={this.toggleModal}
             />
             {modalBox}
+            {hamburgerMenu}
             <Landing content={landingPage} />
           </AppContainer>
         </Route>
@@ -74,8 +95,10 @@ class App extends React.Component {
               endpoint={URL}
               navBarContent={navBar}
               footerContent={landingPage.footer}
+              toggleHamburgerMenu={this.toggleHamburgerMenu}
               toggleLanguage={this.toggleLanguage}
               toggleModal={this.toggleModal}
+              showHamburgerMenu={showHamburgerMenu}
               showModal={showModal}
             />
           </Route>

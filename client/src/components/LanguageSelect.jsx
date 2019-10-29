@@ -52,6 +52,10 @@ const StyledSelect = styled.select`
   & > option {
     font-weight: normal;
   }
+
+  @media (max-width: 990px) {
+    display: none;
+  }
 `;
 
 const LanguageSelect = ({ toggleLanguage }) => (
