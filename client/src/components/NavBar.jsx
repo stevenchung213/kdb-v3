@@ -188,7 +188,13 @@ const HamburgerIcon = styled.i`
   /* color: #3E522D */
   font-size: 36px;
   margin-right: 3vw;
+  transition: color 0.4s ease 0.05s;
   width: auto;
+
+  &:hover {
+    color: #582399;
+    cursor: pointer;
+  }
 
   @media (min-width: 991px) {
     display: none;
