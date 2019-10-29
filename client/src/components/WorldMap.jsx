@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import styled from 'styled-components';
 
 // import './styles.css';
 import FusionCharts from 'fusioncharts';
@@ -18,7 +17,6 @@ import Peru from 'fusionmaps/maps/fusioncharts.peru';
 import Nigeria from 'fusionmaps/maps/fusioncharts.nigeria';
 import Indonesia from 'fusionmaps/maps/fusioncharts.indonesia';
 import CoteDivoire from 'fusionmaps/maps/fusioncharts.cotedivoire';
-import WorldCountries from 'fusionmaps/maps/fusioncharts.worldwithcountries';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import Texas from 'fusionmaps/maps/fusioncharts.texas';
 import California from 'fusionmaps/maps/fusioncharts.california';
@@ -37,6 +35,8 @@ import EastKalimantan from 'fusionmaps/maps/fusioncharts.eastkalimantan';
 import NorthKalimantan from 'fusionmaps/maps/fusioncharts.northkalimantan';
 // import WestKalimantan from 'fusionmaps/maps/fusioncharts.westkalimantan';
 import ReactFC from 'react-fusioncharts';
+
+import WorldCountries from '../maps/worldwithcountries';
 
 FusionCharts.options.creditLabel = false;
 ReactFC.fcRoot(
@@ -73,8 +73,8 @@ ReactFC.fcRoot(
 
 const dataSource = {
   chart: {
-    caption: 'GCF Task Force National Influence',
-    subcaption: 'By Number of GCF Task Force States/Provinces',
+    // caption: 'GCF Task Force National Influence',
+    // subcaption: 'By Number of GCF Task Force States/Provinces',
     numbersuffix: '',
     // includevalueinlabels: '1',
     // labelsepchar: ': ',
@@ -87,8 +87,8 @@ const dataSource = {
     nullentitycolor: '#C3D2DA',
     // entityfillhovercolor: '#FFF9C4',
     showLegend: false,
-    chartLeftMargin: 150,
-    // chartRightMargin: 100,
+    // chartLeftMargin: 40,
+    chartRightMargin: -150,
   },
   colorrange: {
     minvalue: '0',
@@ -936,11 +936,6 @@ const chartConfigs = {
     },
   },
 };
-
-// const WorldMapContainer = styled.div`
-// ,,  height: 100%;
-//   width: 100%;
-// `;
 
 const WorldMap = () => (
   <ReactFC {...chartConfigs} />

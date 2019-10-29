@@ -52,7 +52,7 @@ const MapButtonText = styled.span`
 
 const MapContainer = styled.div`
   height: 600px;
-  width: 100%;
+  width: 100vw;
 `;
 
 const Map = ({ content }) => {
