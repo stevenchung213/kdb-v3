@@ -17,6 +17,10 @@ const JumbotronGrid = styled.div`
   background-position: top left;
   background-attachment: fixed;
   height: 700.8px;
+
+  @media (max-width: 765px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const JumbotronMiniGrid = styled.div`
@@ -27,6 +31,17 @@ const JumbotronMiniGrid = styled.div`
   background-color: rgba(255, 255, 255, 0.75);
   /* align-items: center; */
   padding: 85px 0 85px 0;
+
+  @media (max-width: 1025px) {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 765px) {
+    padding-top: 120px;
+    grid-template-columns: 8fr 1fr;
+    padding-left: 60px;
+  }
 `;
 
 const JumbotronBrandText = styled.div`
@@ -62,6 +77,7 @@ const JumbotronTitle = styled.div`
   &:hover {
     color: #582399;
     cursor: default;
+  }
 `;
 
 const JumbotronDescription = styled.div`

@@ -13,8 +13,8 @@ const HamburgerMenuBox = styled.div`
   position: fixed;
   width: 100%;
   /* width: calc(100% - 310px); */
-  height: 400px;
-  /* height: 100vh; */
+  /* height: 400px; */
+  height: 100vh;
   margin-top: 75px;
   /* margin-top: 150px; */
   /* left: 130px; */
@@ -190,8 +190,7 @@ const HamburgerMenuFade = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  /* height: 1790px; */
-  height: 2062px;
+  height: 2153px;
   background: rgba(0, 0, 0, 0.6);
   z-index: 998;
 `;

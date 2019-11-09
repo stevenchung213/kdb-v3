@@ -15,7 +15,7 @@ import SellingPoints from './SellingPoints';
 const LandingGrid = styled.div`
   display: grid;
   padding-top: 75px;
-  grid-template-rows: 8fr 8fr 8fr 4fr;
+  grid-template-rows: 8fr 8fr 9fr 4fr;
   /* grid-template-columns: auto; */
   /* grid-template-areas: "navbar navbar"
                        "jumbotron jumbotron"
@@ -23,7 +23,8 @@ const LandingGrid = styled.div`
                        "sellingpoints sellingpoints"
                        "footer footer"; */
   /* height: 2265px; */
-  height: 2537px;
+  /* height: 2537px; */
+  height: 2628px;
 `;
 
 const Landing = ({ content }) => {
