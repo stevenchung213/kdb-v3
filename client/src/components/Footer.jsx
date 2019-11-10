@@ -10,6 +10,8 @@ import LanguageSelect from './LanguageSelect';
 import CIFORLogo from '../../dist/assets/logos/CIFOR.png';
 import EIILogo from '../../dist/assets/logos/EII.png';
 import GFWLogo from '../../dist/assets/logos/GFW.png';
+import NORADLogo from '../../dist/assets/logos/NORAD.png';
+import RBFLogo from '../../dist/assets/logos/RBF.png';
 import TCGLogo from '../../dist/assets/logos/TCG.png';
 
 const FACEBOOK_URL = 'https://www.facebook.com/gcf.taskforce';
@@ -19,6 +21,8 @@ const GCFTF_URL = 'https://www.gcftf.org';
 const GCFTF_KDB_URL = 'https://www.gcftaskforce-database.org';
 const GFW_URL = 'https://www.globalforestwatch.org';
 const INSTAGRAM_URL = 'https://www.instagram.com/gcftaskforce/';
+const NORAD_URL = 'https://norad.no/en/front/';
+const RBF_URL = 'https://www.rbf.org/';
 const TCG_URL = 'https://www.theclimategroup.org';
 const TWITTER_URL = 'https://twitter.com/gcftaskforce';
 const YOUTUBE_URL = 'https://www.youtube.com/channel/UCI4m4y7gTCa_o75aGBXNOaw';
@@ -61,31 +65,33 @@ const FooterGrid = styled.div`
 // `;
 
 const AcknowledgementsGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column: 2/3;
+  grid-row: 2/5;
 
-  @media (max-width: 765px) {
-    // /* font-size: 20p18 */
-  }
-  /* grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); */
-  align-items: center;
-  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 22px;
   grid-column-gap: 22px;
+
+  /* grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); */
+  align-items: top;
+  justify-items: center;
   margin: 0 15px;
   height: 100%;
 
   @media (max-width: 1025px) {
-    grid-column: 2/3;
+    /* grid-column: 2/3;
     grid-row: 2/5;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 0;
+    grid-column-gap: 0; */
   }
 
   @media (max-width: 765px) {
     grid-area: acknowledgementsgrid;
     grid-row: 5/6;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(6, auto);
     grid-template-rows: 1fr;
     margin: 0 30px;
     grid-column-gap: 15px;
@@ -199,13 +205,14 @@ const FooterCopyrightText = styled.div`
 `;
 
 const LogoLink = styled.a`
-  width: 130px;
-  height: 130px;
+  width: 115px;
+  height: 115px;
+  align-self: ${({row}) => row ? 'start' : 'end'};
 
   @media (max-width: 1025px) {
     height: 115px;
     width: 115px;
-    margin-bottom: ${({ marginBottom }) => marginBottom || 0};
+
   }
 
   @media (max-width: 765px) {
@@ -218,9 +225,10 @@ const LogoLink = styled.a`
 const Logo = styled.div`
   /* grid-area: logo; */
   background: ${({ logo }) => `no-repeat center/100% url(${logo}`});
+  background-color: white;
   /* border: 2px solid black; */
-  height: 130px;
-  width: 130px;
+  height: 115px;
+  width: 115px;
 
   @media (max-width: 1025px) {
     height: 115px;
@@ -238,7 +246,7 @@ const Logo = styled.div`
 // `;
 
 const BackToMainSiteLink = styled.a`
-  textDecoration: none;
+  text-decoration: none;
 
   @media (max-width: 765px) {
     /* grid-area: backtomainsite; */
@@ -250,7 +258,7 @@ const BackToMainSiteLink = styled.a`
 
 const BackToMainSiteLink2 = styled.a`
   display: none;
-  textDecoration: none;
+  text-decoration: none;
 
   @media (max-width: 765px) {
     grid-area: backtomainsite2;
@@ -274,76 +282,85 @@ const Footer = ({ content }) => {
   return (
     <FooterGrid>
 
-        <FooterTitle1>{MORE}</FooterTitle1>
+      <FooterTitle1>{MORE}</FooterTitle1>
 
-        <FooterTitle2>{WITH_SUPPORT_FROM}</FooterTitle2>
+      <FooterTitle2>{WITH_SUPPORT_FROM}</FooterTitle2>
 
-        <FooterNavListGrid>
-          <FooterNavListItemGrid>
-            <Icon className="fas fa-info" />
-            <span className="menu-text">{ABOUT}</span>
-          </FooterNavListItemGrid>
-          <FooterNavListItemGrid>
-            <Icon className="far fa-file-pdf" />
-            <span className="menu-text">{SOURCES}</span>
-          </FooterNavListItemGrid>
-          <FooterNavListItemGrid>
-            <Icon className="far fa-address-book" />
-            <span className="menu-text">{CONTACTS}</span>
-          </FooterNavListItemGrid>
-          <BackToMainSiteLink href={GCFTF_URL} rel="noopener noreferrer" target="_blank">
-            <FooterNavListItemGrid>
-              <Icon className="fas fa-home" />
-              <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
-            </FooterNavListItemGrid>
-          </BackToMainSiteLink>
-        </FooterNavListGrid>
-
-        <AcknowledgementsGrid>
-          <LogoLink href={GFW_URL} marginBottom="25px">
-            <Logo logo={GFWLogo} />
-          </LogoLink>
-          <LogoLink href={CIFOR_URL} marginBottom="25px">
-            <Logo logo={CIFORLogo} />
-          </LogoLink>
-          <LogoLink href={EII_URL} marginBottom="25px">
-            <Logo logo={EIILogo} />
-          </LogoLink>
-          <LogoLink href={TCG_URL} marginBottom="25px">
-            <Logo logo={TCGLogo} />
-          </LogoLink>
-        </AcknowledgementsGrid>
-
-        <FooterSocialGrid>
-          <a href={FACEBOOK_URL} rel="noopener noreferrer" target="_blank">
-            <SocialIcon className="fab fa-facebook-f fa-3x" />
-          </a>
-          <a href={TWITTER_URL} rel="noopener noreferrer" target="_blank">
-            <SocialIcon className="fab fa-twitter fa-3x" />
-          </a>
-          <a href={INSTAGRAM_URL} rel="noopener noreferrer" target="_blank">
-            <SocialIcon className="fab fa-instagram fa-3x" />
-          </a>
-          <a href={YOUTUBE_URL} rel="noopener noreferrer" target="_blank">
-            <SocialIcon className="fab fa-youtube fa-3x" />
-          </a>
-        </FooterSocialGrid>
-
-        <FooterCopyrightText>
-          ©Governors' Climate and Forests Task Force, 2019
-        </FooterCopyrightText>
-
-        <BackToMainSiteLink2 href={GCFTF_URL} rel="noopener noreferrer" target="_blank">
+      <FooterNavListGrid>
+        <FooterNavListItemGrid>
+          <Icon className="fas fa-info" />
+          <span className="menu-text">{ABOUT}</span>
+        </FooterNavListItemGrid>
+        <FooterNavListItemGrid>
+          <Icon className="far fa-file-pdf" />
+          <span className="menu-text">{SOURCES}</span>
+        </FooterNavListItemGrid>
+        <FooterNavListItemGrid>
+          <Icon className="far fa-address-book" />
+          <span className="menu-text">{CONTACTS}</span>
+        </FooterNavListItemGrid>
+        <BackToMainSiteLink href={GCFTF_URL} rel="noopener noreferrer" target="_blank">
           <FooterNavListItemGrid>
             <Icon className="fas fa-home" />
             <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
           </FooterNavListItemGrid>
-        </BackToMainSiteLink2>
+        </BackToMainSiteLink>
+      </FooterNavListGrid>
 
-        <div />
+      <AcknowledgementsGrid>
+        <LogoLink href={NORAD_URL} rel="noopener noreferrer" target="_blank" row={0}>
+          <Logo logo={NORADLogo} />
+        </LogoLink>
+        <LogoLink href={CIFOR_URL} rel="noopener noreferrer" target="_blank" row={0}>
+          <Logo logo={CIFORLogo} />
+        </LogoLink>
+        <LogoLink href={RBF_URL} rel="noopener noreferrer" target="_blank" row={0}>
+          <Logo logo={RBFLogo} />
+        </LogoLink>
+        <LogoLink href={GFW_URL} rel="noopener noreferrer" target="_blank" row={1}>
+          <Logo logo={GFWLogo} />
+        </LogoLink>
+        <LogoLink href={EII_URL} rel="noopener noreferrer" target="_blank" row={1}>
+          <Logo logo={EIILogo} />
+        </LogoLink>
+        <LogoLink href={TCG_URL} rel="noopener noreferrer" target="_blank" row={1}>
+          <Logo logo={TCGLogo} />
+        </LogoLink>
+      </AcknowledgementsGrid>
+
+      <FooterSocialGrid>
+        <a href={FACEBOOK_URL} rel="noopener noreferrer" target="_blank">
+          <SocialIcon className="fab fa-facebook-f fa-3x" />
+        </a>
+        <a href={TWITTER_URL} rel="noopener noreferrer" target="_blank">
+          <SocialIcon className="fab fa-twitter fa-3x" />
+        </a>
+        <a href={INSTAGRAM_URL} rel="noopener noreferrer" target="_blank">
+          <SocialIcon className="fab fa-instagram fa-3x" />
+        </a>
+        <a href={YOUTUBE_URL} rel="noopener noreferrer" target="_blank">
+          <SocialIcon className="fab fa-youtube fa-3x" />
+        </a>
+      </FooterSocialGrid>
+
+      <FooterCopyrightText>
+        ©Governors' Climate and Forests Task Force, 2019
+      </FooterCopyrightText>
+
+      <BackToMainSiteLink2 href={GCFTF_URL} rel="noopener noreferrer" target="_blank">
+        <FooterNavListItemGrid>
+          <Icon className="fas fa-home" />
+          <span className="menu-text">{BACK_TO_MAIN_SITE}</span>
+        </FooterNavListItemGrid>
+      </BackToMainSiteLink2>
+
+      <div />
 
     </FooterGrid>
   );
 };
 
 export default Footer;
+
+// From 1025px version of LogoLink:
+// margin-bottom: ${({ marginBottom }) => marginBottom || 0};
