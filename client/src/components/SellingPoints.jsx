@@ -5,6 +5,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Carousel from './Carousel';
+
+import GCFTFLogo from '../../dist/assets/logos/GCFTF.png';
+
+const carouselSlidesData = [
+  {
+  //   content: 'STATES AND PROVINCES',
+  //   value: '35',
+  // }, {
+    content: 'MILLION SQUARE KILOMETERS OF TROPICAL FOREST',
+    value: '4.9',
+  }, {
+    content: 'BILLION TONNES OF FOREST CARBON',
+    value: '55',
+  // }, {
+  //   content: 'COUNTRIES',
+  //   value: '10',
+  }, {
+    content: 'OF THE WORLD\'s TROPICAL FORESTS',
+    value: '1/3',
+  },
+];
+
 const SellingPointsGrid = styled.div`
   display: grid;
   /* grid-area: sellingpoints; */
@@ -42,13 +65,17 @@ const SellingPointsTitle = styled.h1`
   }
 `;
 
-const Rectangle = styled.div`
+const Rectangle2 = styled.div`
   place-self: center;
   height: 515px;
   width: 290px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 6px 18px 18px rgba(0, 0, 0, 0.08), -6px 18px 18px rgba(0, 0, 0, 0.08);
+
+  list-style-type: none;
+  text-align: center;
+  padding: 30px;
 
   @media (max-width: 1025px) {
     height: 50vw;
@@ -62,30 +89,59 @@ const Rectangle = styled.div`
   }
 `;
 
-const Dots = styled.ol`
-  list-style: none;
+const Logo = styled.div`
+  place-self: center;
+  background: no-repeat center/100% url(${GCFTFLogo});
   width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-
-  @media (min-width: 766px) {
-    display: none;
-  }
+  height: 100%;
 `;
 
-const Dot = styled.li`
-  background-color: ${({ color }) => color}
-  border-radius: 50%;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-  margin: 0 4px;
+// const CarouselSlide = styled.li`
+//   margin-right: auto;
+//   margin-left: auto;
+//   display: none;
+//   list-style-type: none;
+//   text-align: center;
+//   height: 515px;
+//   width: 290px;
+//   padding: 30px;
+//
+//   @media (max-width: 1025px) {
+//     height: 50vw;
+//     width: 85%;
+//   }
+//
+//   @media (max-width: 765px) {
+//     height: 515px;
+//     width: 290px;
+//
+//     ${({ isActive }) => isActive && css`
+//       place-self: center;
+//       background-color: white;
+//       border-radius: 5px;
+//       box-shadow: 6px 18px 18px rgba(0, 0, 0, 0.08), -6px 18px 18px rgba(0, 0, 0, 0.08);
+//       display: block;
+//     `}
+//   }
+// `;
 
-  @media (min-width: 766px) {
-    display: none;
-  }
+const CarouselSlideContent = styled.div`
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  /* grid-gap: 20px; */
+  place-items: center;
+
+  height: 100%;
+  width: 100%
+`;
+
+const CarouselSlideValue = styled.div`
+  font-size: 60px;
+  /* margin-bottom: 20px; */
+`;
+
+const CarouselSlideDescription = styled.div`
+  font-size: 16px;
 `;
 
 const SellingPoints = ({ content }) => {
@@ -95,14 +151,20 @@ const SellingPoints = ({ content }) => {
     <SellingPointsGrid>
       <SellingPointsTitle>{TITLE}</SellingPointsTitle>
       <SellingPointsMiniGrid>
-        <Rectangle />
-        <Dots>
-          <Dot color="#b5db37" />
-          <Dot color="#3E522D" />
-          <Dot color="#3E522D" />
-        </Dots>
-        <Rectangle hideBelow765 />
-        <Rectangle hideBelow765 />
+        {carouselSlidesData.map((slide, index) => (
+          <Rectangle2
+            key={index}
+            slide={slide}
+            hideBelow765
+          >
+            <CarouselSlideContent>
+              <Logo />
+              <CarouselSlideValue>{slide.value}</CarouselSlideValue>
+              <CarouselSlideDescription>{slide.content}</CarouselSlideDescription>
+            </CarouselSlideContent>
+          </Rectangle2>
+        ))}
+        <Carousel slides={carouselSlidesData} />
       </SellingPointsMiniGrid>
     </SellingPointsGrid>
   );
