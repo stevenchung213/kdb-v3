@@ -36,6 +36,7 @@ const FooterGrid = styled.div`
 
   background-color: #3E522D;
   color: white;
+  height: 352px;
 
   @media (max-width: 765px) {
     grid-template-columns: 1fr;
@@ -48,8 +49,6 @@ const FooterGrid = styled.div`
                          'withsupportfrom'
                          'acknowledgementsgrid'
                          'copyright';
-
-    /* height: 352px; */
     height: 400px;
   }
 `;
