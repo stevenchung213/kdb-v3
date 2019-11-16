@@ -94,6 +94,7 @@ const NavLink1 = styled.div`
     display: none;
   }
 `;
+
 const NavLink2 = styled.div`
   /* color: #3E522D; */
   grid-area: navlink2;
