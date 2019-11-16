@@ -90,9 +90,44 @@ class App extends React.Component {
           <Route exact path="/">
             <Landing content={landingPage} />
           </Route>
-          {ROUTES.map(({ NAME, URL }) => (
-            <Route exact path={URL} key={NAME}>
-              <NJPage />
+          {ROUTES.filter(({ JURISDICTION_TYPE }) => JURISDICTION_TYPE === 'state').map(({
+            FLAGS,
+            FULL_NAME,
+            HEADER_IMAGE_URL,
+            JURISDICTION_TYPE,
+            NATION_NAME,
+            STATE_NAME,
+            URL
+          }) => (
+            <Route path={URL} key={FULL_NAME}>
+              <NJPage
+                flags={FLAGS}
+                fullName={FULL_NAME}
+                headerImageURL={HEADER_IMAGE_URL}
+                jurisdictionType={JURISDICTION_TYPE}
+                nationName={NATION_NAME}
+                stateName={STATE_NAME}
+              />
+            </Route>
+          ))}
+          {ROUTES.filter(({ JURISDICTION_TYPE }) => JURISDICTION_TYPE === 'nation').map(({
+            FLAGS,
+            FULL_NAME,
+            HEADER_IMAGE_URL,
+            JURISDICTION_TYPE,
+            NATION_NAME,
+            STATE_NAME,
+            URL
+          }) => (
+            <Route path={URL} key={FULL_NAME}>
+              <NJPage
+                flags={FLAGS}
+                fullName={FULL_NAME}
+                headerImageURL={HEADER_IMAGE_URL}
+                jurisdictionType={JURISDICTION_TYPE}
+                nationName={NATION_NAME}
+                stateName={STATE_NAME}
+              />
             </Route>
           ))}
         </Switch>

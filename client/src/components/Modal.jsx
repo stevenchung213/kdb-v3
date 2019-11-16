@@ -128,7 +128,7 @@ const Modal = ({ toggleModal }) => {
                   to={jurisdiction.URL}
                   onClick={toggleModal}
                 >
-                  {jurisdiction.NAME}
+                  {jurisdiction.NATION_NAME}
                 </ModalNationLink>
               );
             }
@@ -138,7 +138,7 @@ const Modal = ({ toggleModal }) => {
                 to={jurisdiction.URL}
                 onClick={toggleModal}
               >
-                {jurisdiction.NAME}
+                {jurisdiction.STATE_NAME}
               </ModalStateLink>
             );
           })}
