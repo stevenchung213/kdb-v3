@@ -3,18 +3,17 @@
  */
 
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import NJHeader from './NJHeader';
-import NJNav from './NJNav';
 import NJBody from './NJBody';
 
 // One fragment is ???!
 const NJPageGrid = styled.div`
   display: grid;
   padding-top: 75px;
-  grid-template-rows: 400px 50px auto;
+  grid-template-rows: 460px auto;
   /* grid-template-columns: auto; */
   /* grid-template-areas: "nj-header nj-header"
                           "nj-nav nj-nav"
@@ -22,12 +21,29 @@ const NJPageGrid = styled.div`
   height: 1250px;
 `;
 
-const NJPage = () => (
-  <NJPageGrid>
-    <NJHeader>Hello Nation/Jurisidiction page!</NJHeader>
-    <NJNav>Hello Nation/Jurisidiction page!</NJNav>
-    <NJBody>Hello Nation/Jurisidiction page!</NJBody>
-  </NJPageGrid>
-);
+const NJPage = ({
+  flags,
+  fullName,
+  headerImageURL,
+  jurisdictionType,
+  nationName,
+  stateName,
+}) => {
+  let { path, url } = useRouteMatch();
+  console.log(stateName);
+  return (
+    <NJPageGrid>
+      <NJHeader flags={flags} fullName={fullName} headerImageURL={headerImageURL} jurisdictionType={jurisdictionType} nationName={nationName} stateName={stateName}/>
+      <Switch>
+        <Route exact path={path}>
+          <Redirect to={`${path}/overview`} />
+        </Route>
+        <Route path={`${path}/:pageId`}>
+          <NJBody />
+        </Route>
+      </Switch>
+    </NJPageGrid>
+  );
+};
 
 export default NJPage;
