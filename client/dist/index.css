@@ -54,7 +54,7 @@
   font-weight: 900;
 }
 
-html, body, #root {
+html, body, #app {
   height: auto;
   margin: 0;
   overscroll-behavior: none;
