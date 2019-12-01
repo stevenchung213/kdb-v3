@@ -16,7 +16,7 @@ const LawListItemStyled = styled.div`
   font-weight: 500;
   height: 45px;
   margin: 15px auto;
-  width: 90%;
+  width: 80%;
 `;
 
 const LawListItem = () => (
