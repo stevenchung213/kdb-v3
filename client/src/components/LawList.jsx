@@ -34,6 +34,7 @@ const DUMMY_LAW_DATA = [
 const LawListStyled = styled.div`
   grid-column: 1/4;
   background-color: white;
+  /* background-color: #e5e5e5; */
   height: 100%;
   overflow-y: scroll;
   width: 100%;
@@ -42,8 +43,8 @@ const LawListStyled = styled.div`
 
 const LawList = () => (
   <LawListStyled>
-    {DUMMY_LAW_DATA.map(law => (
-      <LawListItem key={law.id} law={law} />
+    {DUMMY_LAW_DATA.map((law, index) => (
+      <LawListItem index={index} key={law.id} law={law} lawListLength={DUMMY_LAW_DATA.length} />
     ))}
   </LawListStyled>
 );
