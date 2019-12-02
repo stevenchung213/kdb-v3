@@ -18,7 +18,9 @@ const NJPageGrid = styled.div`
   /* grid-template-areas: "nj-header nj-header"
                           "nj-nav nj-nav"
                           "nj-body nj-body"*/
-  height: 1250px;
+  /* height: 1250px; */
+  height: 4000px;
+  width: 100%;
 `;
 
 const NJPage = ({
