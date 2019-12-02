@@ -99,8 +99,8 @@ CREATE TABLE law_translate (
  language_code CHAR(2),
  law_id INTEGER,
  law_type VARCHAR(64),
- name VARCHAR(255)
- summary TEXT,
+ name VARCHAR(255),
+ summary TEXT
 );
 
 DROP TABLE IF EXISTS safeguard CASCADE;
@@ -727,6 +727,8 @@ INSERT INTO law_tag (id) VALUES (20);
 INSERT INTO law_tag (id) VALUES (21);
 INSERT INTO law_tag (id) VALUES (22);
 INSERT INTO law_tag (id) VALUES (23);
+INSERT INTO law_tag (id) VALUES (24);
+INSERT INTO law_tag (id) VALUES (25);
 
 
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en', 1, 'Environmental');
@@ -752,6 +754,8 @@ INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en'
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en', 21, 'REDD+');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en', 22, 'Restoration');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en', 23, 'Incentives');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en', 24, 'Resilience');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('en', 25, 'Local Communities');
 
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 1, 'Ambiental');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 2, 'Cambio Climático');
@@ -776,6 +780,8 @@ INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es'
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 21, 'REDD+');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 22, 'Restauracion');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 23, 'Incentivos');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 24, 'Resistencia');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('es', 25, 'Comunidades Locales');
 
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 1, 'Lingkungan');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 2, 'Perubahan Iklim');
@@ -800,6 +806,8 @@ INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr'
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 21, 'REDD+');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 22, 'Restorasi');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 23, 'Insentif');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 24, 'Résistance');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('fr', 25, 'Communautés locales');
 
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 1, 'Lingkungan');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 2, 'Perubahan Iklim');
@@ -824,6 +832,8 @@ INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id'
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 21, 'REDD+');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 22, 'Restorasi');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 23, 'Insentif');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 24, 'Ketangguhan');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('id', 25, 'Masyarakat Sekitar');
 
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 1, 'Ambiente');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 2, 'Alterações Climáticas');
@@ -848,10 +858,11 @@ INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt'
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 21, 'REDD+');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 22, 'Restauração');
 INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 23, 'Incentivos');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 24, 'Resiliência');
+INSERT INTO law_tag_translate (language_code, law_tag_id, tag_name) VALUES ('pt', 25, 'Comunidades Locais');
 
-
-INSERT INTO vegetation (id, amount) VALUES ('', '');
-INSERT INTO vegetation_translate (id, language_code, vegetation_id, vegetation_type) VALUES ('', '', '', '');
+-- INSERT INTO vegetation (id, amount) VALUES ('', '');
+-- INSERT INTO vegetation_translate (id, language_code, vegetation_id, vegetation_type) VALUES ('', '', '', '');
 
 
 -- ---
