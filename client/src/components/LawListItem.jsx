@@ -6,6 +6,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import LawBody from './LawBody';
+import PartnershipBody from './PartnershipBody';
 
 const LawListItemGrid = styled.div`
   display: grid;
@@ -111,7 +112,7 @@ class LawListItem extends React.Component {
           <Icon className={chevronClass} />
         </LawHeader>
 
-        <LawBody isOpen={isOpen} />
+        <PartnershipBody isOpen={isOpen} />
 
         <LawTagList isOpen={isOpen}>
           <LawTag>Forestry</LawTag>
