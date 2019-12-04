@@ -32,7 +32,6 @@ const NJPage = ({
   stateName,
 }) => {
   let { path, url } = useRouteMatch();
-  console.log(stateName);
   return (
     <NJPageGrid>
       <NJHeader flags={flags} fullName={fullName} headerImageURL={headerImageURL} jurisdictionType={jurisdictionType} nationName={nationName} stateName={stateName}/>
