@@ -23,7 +23,7 @@ const navLinkList = [
   },
   {
     linkText: 'Partnerships',
-    urlText: 'parterships',
+    urlText: 'partnerships',
   },
   {
     linkText: 'Report Cards',
