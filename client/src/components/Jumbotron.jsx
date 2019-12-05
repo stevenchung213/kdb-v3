@@ -5,7 +5,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import JumbotronBackgroundImage from '../../dist/assets/images/Mau-Forest-Kenya-copy.png';
+// import JumbotronBackgroundImage from '../../dist/assets/images/Mau-Forest-Kenya-copy.png';
+import JumbotronBackgroundImage from '../../dist/assets/images/LandingBannerCropped.jpg';
 
 const JumbotronGrid = styled.div`
   display: grid;
@@ -69,7 +70,7 @@ const JumbotronTitle = styled.div`
   padding-top: 5px;
   text-align: left;
   width: 100%;
-  font-family: helvetica;
+  font-family: 'helvetica';
   font-size: 75px;
   text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
   /* border: 1px dashed red; */
