@@ -5,7 +5,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GCFTFLogo from '../../dist/assets/logos/GCFTF.png';
+import PartnershipStatusStepper from './PartnershipStatusStepper';
 
 const PartnershipBodyGrid = styled.div`
   display: grid;
@@ -20,25 +20,16 @@ const PartnershipBodyGrid = styled.div`
 
 const PartnershipBodyMiniGrid = styled.div`
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: minmax(122px, 1fr) 3fr;
+  grid-template-rows: repeat(4, 1fr) 2fr;
   grid-row-gap: 10px;
   align-items: center;
 
+  border-right: 1px solid black;
   height: 100%;
   padding-right: 7.26%;
   width: 100%;
 `;
-
-// const PartnershipBodyLogo = styled.div`
-//   grid-column: 2/3;
-//   grid-row: 1/4;
-//   justify-self: right;
-//
-//   background: ${({ logo }) => `no-repeat center/100% url(${logo})`};
-//   height: 112.5px;
-//   width: 112.5px;
-// `;
 
 const PartnershipLabel = styled.span`
   font-size: 16px;
@@ -51,9 +42,11 @@ const PartnershipText = styled.span`
 `;
 
 const PartnershipDescription = styled.div`
-  border-left: 1px solid
+  align-self: center;
   font-size: 14px;
   padding-left: 7.26%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 const PartnershipTagList = styled.div`
@@ -81,8 +74,8 @@ const PartnershipTag = styled.div`
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
-  height: 70%;
-  line-height: 31px; /* 0.70 (height) times grid row height (48px)...plus a little? */
+  height: 34px;
+  line-height: 34.5px;
   margin: 0 10px;
   padding: 0 10px;
   text-align: center;
@@ -113,8 +106,8 @@ const PartnershipBody = ({ isOpen }) => {
           <PartnershipTag>INPE</PartnershipTag>
           <PartnershipTag>INPE</PartnershipTag>
         </PartnershipTagList>
-        <PartnershipLabel>Status:</PartnershipLabel>
-        <div>Something Else!</div>
+
+        <PartnershipStatusStepper activeStep={2} />
       </PartnershipBodyMiniGrid>
       <PartnershipDescription>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in mauris quam. In semper dolor vel nunc porttitor ornare. Maecenas hendrerit urna euismod, sodales orci eget, pulvinar risus. Proin lacinia tincidunt ante, quis feugiat ipsum accumsan id. Sed facilisis urna nisl, in ultricies turpis fermentum eget. Nullam turpis libero, venenatis eu urna eget, dapibus varius mauris. Integer vehicula porttitor vestibulum. Nunc bibendum tortor id egestas commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pharetra eleifend felis. Praesent commodo risus nec aliquet maximus. Mauris bibendum volutpat dui. Pellentesque at cursus arcu. Pellentesque consequat aliquet faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

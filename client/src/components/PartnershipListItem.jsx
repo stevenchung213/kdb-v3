@@ -11,7 +11,6 @@ const PartnershipListItemGrid = styled.div`
   display: grid;
   grid-template-rows: 45px auto 45px;
 
-  /* border: 3px solid black; */
   border-radius: 5px;
   box-shadow: 6px 18px 18px rgba(0, 0, 0, 0.08), -6px 18px 18px rgba(0, 0, 0, 0.08);
   font-size: 16px;

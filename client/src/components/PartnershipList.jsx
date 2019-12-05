@@ -30,15 +30,16 @@ const DUMMY_PARTNERSHIP_DATA = [
   { id: 20 },
 ];
 
-// TODO: Remove grid-column property (instantiate component within a Tile)
 const PartnershipListStyled = styled.div`
-  grid-column: 1/4;
+  grid-column: 1/5;
+
   background-color: white;
-  /* background-color: #e5e5e5; */
+  border-top: 3px solid #3E522D;
   height: 100%;
   overflow-y: scroll;
-  width: 100%;
-  padding: 30px 0;
+  width: 70%;
+  justify-self: center;
+  margin: 30px 0;
 `;
 
 const PartnershipList = () => (
