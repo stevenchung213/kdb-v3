@@ -17,6 +17,14 @@ const MapGrid = styled.div`
   background-color: white;
 `;
 
+const MapTitle = styled.h1`
+  margin: 0;
+`;
+
+const MapSubTitle = styled.h3`
+  margin: 0;
+`;
+
 const MapButton = styled.div`
   background-color: transparent;
   border: solid black 2px;
@@ -51,7 +59,8 @@ const MapButtonText = styled.span`
 `;
 
 const MapContainer = styled.div`
-  height: 600px;
+  /* height: 600px; */
+  height: 662.5px;
   width: 100vw;
 `;
 
@@ -61,6 +70,8 @@ const Map = ({ content }) => {
   return (
     <MapGrid>
       <MapContainer>
+        <center><MapTitle>GCF Task Force</MapTitle></center>
+        <center><MapSubTitle>38 States and Provinces from 10 countries</MapSubTitle></center>
         <WorldMap />
       </MapContainer>
       <MapButton>

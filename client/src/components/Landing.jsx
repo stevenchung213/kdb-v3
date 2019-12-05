@@ -24,7 +24,8 @@ const LandingGrid = styled.div`
                        "footer footer"; */
   /* height: 2265px; */
   /* height: 2537px; */
-  height: 2265px;
+  /* height: 2265px; */
+  height: 2367.5px;
 `;
 
 const Landing = ({ content }) => {
