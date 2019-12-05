@@ -11,11 +11,16 @@ const TabStyled = styled.div`
   font-weight: 700;
   color: #a0a0a0;
   text-transform: uppercase;
+  transition: color 0.4s ease 0.05s;
   white-space: nowrap;
   ${({isActive}) => isActive && css`
     color: #4a4a4a;
     border-bottom: solid 3px #4a4a4a;
   `}
+  &:hover {
+    color: #582399;
+    cursor: pointer;
+  }
 `
 
 const Tab = ({ isActive, label, handleTabClick }) => (
