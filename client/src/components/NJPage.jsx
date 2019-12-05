@@ -19,7 +19,7 @@ const NJPageGrid = styled.div`
                           "nj-nav nj-nav"
                           "nj-body nj-body"*/
   /* height: 1250px; */
-  height: 4000px;
+  height: 3000px;
   width: 100%;
 `;
 
