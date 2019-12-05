@@ -68,7 +68,7 @@ const AcknowledgementsGrid = styled.div`
   grid-row: 2/5;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-row-gap: 22px;
   grid-column-gap: 22px;
@@ -90,7 +90,7 @@ const AcknowledgementsGrid = styled.div`
   @media (max-width: 765px) {
     grid-area: acknowledgementsgrid;
     grid-row: 5/6;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(8, auto);
     grid-template-rows: 1fr;
     margin: 0 30px;
     grid-column-gap: 15px;
@@ -316,11 +316,17 @@ const Footer = ({ content }) => {
         <LogoLink href={RBF_URL} rel="noopener noreferrer" target="_blank" row={0}>
           <Logo logo={RBFLogo} />
         </LogoLink>
-        <LogoLink href={GFW_URL} rel="noopener noreferrer" target="_blank" row={1}>
+        <LogoLink href={GFW_URL} rel="noopener noreferrer" target="_blank" row={0}>
           <Logo logo={GFWLogo} />
         </LogoLink>
         <LogoLink href={EII_URL} rel="noopener noreferrer" target="_blank" row={1}>
           <Logo logo={EIILogo} />
+        </LogoLink>
+        <LogoLink href={TCG_URL} rel="noopener noreferrer" target="_blank" row={1}>
+          <Logo logo={TCGLogo} />
+        </LogoLink>
+        <LogoLink href={TCG_URL} rel="noopener noreferrer" target="_blank" row={1}>
+          <Logo logo={TCGLogo} />
         </LogoLink>
         <LogoLink href={TCG_URL} rel="noopener noreferrer" target="_blank" row={1}>
           <Logo logo={TCGLogo} />
