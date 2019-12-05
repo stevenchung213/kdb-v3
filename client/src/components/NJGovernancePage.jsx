@@ -12,8 +12,8 @@ import Tile from './Tile';
 const GovernanceGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1000px;
-  grid-gap: 5%;
+  grid-template-rows: 80vh;
+  grid-gap: 2%;
 
   height: 100%;
   width: 100%;

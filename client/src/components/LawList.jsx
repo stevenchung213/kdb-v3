@@ -30,21 +30,24 @@ const DUMMY_LAW_DATA = [
   { id: 20 },
 ];
 
-// TODO: Remove grid-column property (instantiate component within a Tile)
 const LawListStyled = styled.div`
-  grid-column: 1/4;
   background-color: white;
-  /* background-color: #e5e5e5; */
-  height: 100%;
+  border-top: 3px solid #3E522D;
+  height: calc(100% - 5% - 37px - 15px);
   overflow-y: scroll;
   width: 100%;
-  padding: 30px 0;
+  margin: 15px 0;
 `;
 
 const LawList = () => (
   <LawListStyled>
     {DUMMY_LAW_DATA.map((law, index) => (
-      <LawListItem index={index} key={law.id} law={law} lawListLength={DUMMY_LAW_DATA.length} />
+      <LawListItem
+        index={index}
+        key={law.id}
+        law={law}
+        lawListLength={DUMMY_LAW_DATA.length}
+      />
     ))}
   </LawListStyled>
 );

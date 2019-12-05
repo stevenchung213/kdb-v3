@@ -6,13 +6,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import LawBody from './LawBody';
-import PartnershipBody from './PartnershipBody';
 
 const LawListItemGrid = styled.div`
   display: grid;
   grid-template-rows: 45px auto 45px;
 
-  /* border: 3px solid black; */
   border-radius: 5px;
   box-shadow: 6px 18px 18px rgba(0, 0, 0, 0.08), -6px 18px 18px rgba(0, 0, 0, 0.08);
   font-size: 16px;
@@ -20,7 +18,7 @@ const LawListItemGrid = styled.div`
   margin: 0 auto;
   margin-bottom: ${({ index, isOpen, lastIndex }) => (isOpen && (index !== lastIndex)) ? '45px' : '30px'};
   margin-top: ${({ index, isOpen }) => (isOpen && (index !== 0)) ? '45px' : '30px'};
-  width: 80%;
+  width: 95%;
 `;
 
 const LawHeader = styled.div`
@@ -53,13 +51,12 @@ const LawTagList = styled.div`
   display: flex;
   align-items: center;
 
-  /* -webkit-overflow-scrolling: touch;   For Momentum Scroll on Mobile */
-
   background-color: white;
   border-radius: 0 0 5px 5px;
   direction: rtl;
   height: 100%;
   overflow-x: auto;
+  /* -webkit-overflow-scrolling: touch; For Momentum Scroll on Mobile */
   padding-right: 2.5%;
   width: 100%;
 
@@ -70,8 +67,8 @@ const LawTagList = styled.div`
 
 const LawTag = styled.div`
   flex: 0 0 auto;
-  /* border: 1px solid black; */
-  /* border-radius: 10px; */
+  /* border: 1px solid black;
+  border-radius: 10px; */
   height: 70%;
   line-height: 31px; /* 0.70 (height) times grid row height (48px)...plus a little? */
   margin: 0 10px;
@@ -112,7 +109,7 @@ class LawListItem extends React.Component {
           <Icon className={chevronClass} />
         </LawHeader>
 
-        <PartnershipBody isOpen={isOpen} />
+        <LawBody isOpen={isOpen} />
 
         <LawTagList isOpen={isOpen}>
           <LawTag>Forestry</LawTag>
