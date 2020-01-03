@@ -66,9 +66,9 @@ const ContactsRoleTitle = styled.h4`
 
   margin: 0;
 
-  @media (max-width: 765px) {
+  ${'' /* @media (max-width: 765px) {
     margin-bottom: 10px;
-  }
+  } */}
 `;
 
 const ContactsPhoto = styled.div`
@@ -101,7 +101,7 @@ const ContactsDetails = styled.div`
 
 const ContactsDetailsText = styled.div`
   font-size: ${({ isName }) => (isName ? '14px' : '12px')};
-  margin: 10px 0;
+  margin: ${({ isName }) => (isName ? '0' : '10px 0')};
 `;
 
 // const ContactsCardGrid = styled.div`
@@ -113,14 +113,15 @@ const ContactsDetailsText = styled.div`
 const ContactsCardGrid = styled.div`
   display: grid;
   grid-row-gap: 5%;
-  grid-template-rows: 0.5fr 2.5fr auto;
+  grid-template-rows: 20px 150px auto;
   place-items: center;
 
   height: 100%;
   width: 100%;
+  max-width: 330px;
 
   @media (max-width: 765px) {
-    grid-row-gap: 0;
+    ${'' /* grid-row-gap: 0; */}
   }
 `;
 
