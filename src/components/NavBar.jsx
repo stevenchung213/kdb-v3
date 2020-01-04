@@ -71,9 +71,10 @@ const NavTitle = styled.div`
     text-align: center;
   }
   
-  @media (max-width: 391px) {
+  @media (max-width: 479px) {
     line-height: 20px;
-    padding-top: 20px;
+    padding: 20px 20px 0 20px;
+    width: 85%;
   }
 `;
 
@@ -81,7 +82,7 @@ const NavLink = styled.div`
   grid-area: ${({ gridArea }) => gridArea};
 
   font-weight: 600;
-  height: 100%
+  height: 100%;
   line-height: 75px;
   padding: 0 5px;
   text-align: right;
