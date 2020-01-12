@@ -36,9 +36,7 @@ const MapButton = styled.div`
   cursor: pointer !important;
   display: flex;
   height: 60%;
-  min-width: 260px;
   transition: border 0.6s ease 0s, background-color 0.6s ease 0s, color 0.6s ease 0s;
-  width: 25%;
 
   &:hover {
     background-color: #3e522d;
